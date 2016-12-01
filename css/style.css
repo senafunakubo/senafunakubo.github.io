@@ -1,2 +1,54 @@
-body{
-  background-color: deeppink}
+#all{
+  height: 100%;
+  width: 100%;
+  background-color:#fff3b4;
+  position:relative;
+}
+
+.coloured-div{
+  height: 32%;
+  width: 98%;
+  top: 10px;
+  margin: 10px;
+  position: relative;
+}
+
+#div-red{
+  background-color: #FBC2B5;
+  text-align: center;
+}
+
+#div-green{
+  text-align: center;
+  background-color: #FFA8A9;
+}
+
+#div-blue{
+  text-align: center;
+  background-color: #F786AA;
+}
+
+#div-profile{
+  position: relative;
+  height: 90%;
+  top: 5%;
+}
+
+#div-profile img{
+   position: relative;
+   height: 100%;
+}
+
+#div-green span{
+  font-family: fantasy;
+  font-size: 60px;
+  position: relative;
+  top: 30%;
+}
+
+#div-blue span{
+  font-family: monospace;
+  font-size: 25px;
+  position: relative;
+  top: 15%;
+}
