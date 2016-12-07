@@ -1,0 +1,19 @@
+#div1 {
+  position: relative;
+  background-color: red;
+  height: 100px;
+  width: 100%;
+}
+
+#div2 {
+  position: relative;
+  background-color: blue;
+  height: 100px;
+  width: 100%;
+  display: none;
+}
+
+.div2child{
+  color: white;
+  position: relative;
+}
