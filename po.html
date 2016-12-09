@@ -15,6 +15,11 @@
 
   <script type="text/javascript" src="js/jquery-3.1.1.js"</script>
   <script type="text/javascript" src="js/bootstrap.min.js"</script>
+  <script type="text/javascript" src="js/po.js"</script>
+  <script type="text/javascript" src="js/lightbox.js"</script>
+
+<link href="css/lightbox.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 </head>
 
@@ -23,19 +28,19 @@
   <div class="container">
         <div class="row">
 
-          <div id="div-bk" class="col-md-4">
+          <div id="div-bk" class="col-md-3">
            <div id="div-profile" class="div-waku">
             <span>Sena Funakubo</span>
            </div>
            <div id="div-profile2">
             <span>I'm a CICCC student<br></div>
-              
+
            <div id="div-profile3">
             ( Design /Programming )</span>
           </div>
 </br>
           <div class="div-photo1">
-            <img src="img/penguin.jpg" alt="penguin.png" width="100"/>
+            <img src="img/tori.jpg" alt="penguin.png" width="100"/>
           </div>
 
 </br><hr>
@@ -60,18 +65,30 @@
            </div>
 </br>
 
-         <div class="col-md-8">
-           <div class="col-md-4">
-             <img src="img/travel.png" alt="travel.png" width="200" height="293">
-          </div>
-          <div class="col-md-4">
-            <img src="img/sena-webpage-home.png" alt="travel.png" width="200"/>
+    <div class="col-md-9">
+           <div class="col-md-3">
+              <div class="PhotoBox">
+             <a href="img/travel.png" data-lightbox="image">
+               <img src="img/travel-small.png" width="200" height="180" alt="travel">
+               <div class="SlideBox">
+               <p class="Caption">Eco travel company</p>
+               </div>
+             </a>
+              </div>
+             </div>
+          <div class="col-md-3">
+            <a href="img/sena-webpage-home.png" data-lightbox="image">
+            <img src="img/saeg.png" alt="fashion" width="200" height="180"/>
          </div>
+         <div class="col-md-3">
+           <a href="img/app-location.png" data-lightbox="image">
+           <img src="img/location.png" alt="icecream" width="200" height="180"/>
+        </div>
 
-          </div>
+    </div>
         </div>
   </div>
 
-
+<script src="js/lightbox.js"></script>
 </body>
 </html>
