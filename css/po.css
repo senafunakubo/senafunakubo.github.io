@@ -1,3 +1,9 @@
+body{
+  background-image: url("../img/bgh.jpg");
+  background-color: #E0E0E2;
+  background-size: cover;
+}
+
 #div-profile{
   font-family: "Bungee", "Aref Ruqaa", arial;
   font-size: 20px;
@@ -42,10 +48,10 @@ border: 5px solid black;
   margin-left: 60px;
 }
 
-#div-menu{
+.div-menu{
   font-family: "Bungee","Aref Ruqaa", arial;
   font-size: 15px;
-  margin-left: 50px;}
+  margin-left: 30px;}
 
 hr {
 height: 1px;
@@ -56,7 +62,7 @@ border-top: dashed;
 }
 
 #div-sns{
-  margin-left: 200px;
+  text-align: right;
 }
 
 div.PhotoBox {
@@ -74,13 +80,23 @@ div.PhotoBox div.SlideBox {
    top: 180px;
    width: 200px;
    height: 180px;
-   background-color: #F7F7FF;
-   color: black;
+   background-color: #160F29;
+   color: white;
 }
 
-div.PhotoBox div.SlideBox p.Caption {
-   font-weight: bold;
+div.PhotoBox div.SlideBox2 {
+   position: absolute;
+   left: 0px;
+   top: 180px;
+   width: 200px;
+   height: 180px;
+   background-color: #246A73;
+   color: white;
+}
+
+div.PhotoBox p.Caption {
+   text-align: center;
    font-size: 18px;
-   font-family: "Poiret One",arial;
+   font-family: "Aref Ruqaa",arial;
    margin: 0.5em;
 }
