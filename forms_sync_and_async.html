@@ -18,7 +18,7 @@
    <div class="container">
      <div class="row">
        <div class="col-xs-12">
-        <form action="http://api.ideiadoluiz.com.br/email/index.php" method="post">
+        <form id="mainForm" action="#">
           <div class="form-group">
            <label for="txtContact">Contact Name:</label>
            <input type="text" id="contact" name="contactName" class="form-control"/>
@@ -44,7 +44,13 @@
         </form>
        </div>
      </div>
-    </div>
+
+       <div class="row">
+         <div class="col-xs-12 center">
+           <span id="result"></span>
+        </div>
+       </div>
    </div>
+  </div>
 </body>
 </html>
