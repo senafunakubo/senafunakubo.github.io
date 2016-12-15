@@ -16,7 +16,7 @@ $(function(){
        method:"post",
        data: myData
      });
-     
+
      // ajax...画面を更新しないデータの通信, not to do refresh the page, ex) google suggest
 
      request.done(function(data){
@@ -33,10 +33,13 @@ $(function(){
      request.fail(function(jqXHR, textStatus, errorThrown){
       console.log(jqXHR+ " " + textStatus + errorThrown);
       });
+      //http://api.jquery.com/jquery.ajax/参照
+      //コンソールログ関数はブラウザのコンソールにメッセージを出力できる関数
+      //動作確認やデバッグに活用できる
 
      event.preventDefault();
-      //  preventDefault()は、実行したイベントがキャンセル可能である場合、イベントをキャンセルするためのメソッドです。
-      //  「イベント」とは、分かりやすい例で言うと、フォームのテキストエリアの入力やチェックボックスのチェック、リンクのクリックなどが挙げられます。
-      //  preventDefault()でイベントがキャンセルされると、テキストエリアの入力やチェックボックスのチェック、あるいはリンク先への遷移は行われません。
+      //  preventDefault()は、実行したイベントがキャンセル可能な場合、イベントをキャンセルするためのメソッド。
+      //  「イベント」例、フォームのテキストエリアの入力やチェックボックスのチェック、リンクのクリックなど
+      //  preventDefault()でイベントがキャンセルされると、テキストエリアの入力などは行われません。
   });
  });
