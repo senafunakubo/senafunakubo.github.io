@@ -1,72 +1,57 @@
 body{
-  background-image: url("../img/bgh.jpg");
-  background-color: #E0E0E2;
-  background-size: cover;
+  /*background-image: url("../img/bg2.jpg");*/
+  background-color: #2B2B2B;
+  /*background-size: cover;*/
 }
 
-#div-all{
+#div-menu{
   font-family: "Bungee", "Aref Ruqaa", arial;
-  background-color:white;
+  font-size: 10px;
+  padding-top: 10px;
+  padding-left: 900px;
+}
+
+.navbar a {
+    color: #333333;
+}
+
+.navbar a:hover {
+    color: #ffffff;
+    border-radius: 3px;
+}
+
+.nav>a:hover,
+.nav>a:focus {
+  text-decoration: none;
+  background-color:#337ab7;
+}
+
+#div-pf{
+  font-family: "Bungee", "Aref Ruqaa", arial;
+  background-color:#F7F7F7;
   padding-left: 3px;
-  /*top: 20px;*/
 }
 
 .div-profile1{
   font-size: 20px;
-  margin-top: 50px;
-   padding-left: 15px;
-   margin-left: 35px;
-   /*top: 20px;*/
+  text-align: center;
 }
 
-.div-profile2{
+.div-profile2 , .div-profile3{
   font-size: 15px;
-  margin-left: 60px;
-}
-
-.div-profile3{
-  font-size: 15px;
-  margin-left: 40px;
+  text-align: center;
 }
 
 .div-waku{
 border: 5px solid black;
  padding: 1px;
- height: 30%;
  width: 78%;
  top: 10px;
- margin: 0px 0px 10px 0px;
- text-align: center;
+ margin: 30px 0px 15px 35px;
 }
-
-.tori img{
-  border-radius: 50%;
-  width: 130px;
-  height: 130px;
-  margin-left: 75px;
-}
-
-.div-menu{
-  font-size: 15px;
-  margin-left: 30px;}
-
-  .nav-pills a {
-      color: #333333;
-  }
-
-  .nav-pills a:hover {
-      color: #ffffff;
-      border-radius: 3px;
-  }
-
-.nav>li>a:hover,
-.nav>li>a:focus {
-    text-decoration: none;
-    background-color:#337ab7;
-}
-
 
 #div-sns{
+  font-size: 15px;
   text-align: right;
 }
 
