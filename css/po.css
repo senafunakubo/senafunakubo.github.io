@@ -1,33 +1,24 @@
 body{
-  /*background-image: url("../img/bg2.jpg");*/
-  background-color: #2B2B2B;
-  /*background-size: cover;*/
+  background-image: url("../img/snow.jpg");
+  /*background-color: #98BF97;*/
+  background-size: cover;
 }
 
 #div-menu{
   font-family: "Bungee", "Aref Ruqaa", arial;
   font-size: 10px;
   padding-left: 900px;
+  text-shadow: 1px 1px 1px #C0C1EA;
 }
 
-.navbar a {
-    color: #333333;
-}
-
-.navbar a:hover {
-    color: #ffffff;
-    border-radius: 3px;
-}
-
-.nav>a:hover,
-.nav>a:focus {
-  text-decoration: none;
-  background-color:#337ab7;
+.navbar{
+  background-color: white;
+  opacity: 0.9;
 }
 
 #div-pf{
   font-family: "Bungee", "Aref Ruqaa", arial;
-  background-color:#F7F7F7;
+  background-color:white;
   padding-left: 3px;
 }
 
@@ -94,3 +85,7 @@ div.PhotoBox p.Caption {
    font-family: "Aref Ruqaa",arial;
    margin: 0.5em;
 }
+
+/*span.smallmenu{
+  font-size: 15px;
+}*/
