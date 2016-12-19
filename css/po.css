@@ -7,7 +7,6 @@ body{
 #div-menu{
   font-family: "Bungee", "Aref Ruqaa", arial;
   font-size: 10px;
-  padding-top: 10px;
   padding-left: 900px;
 }
 
@@ -43,7 +42,7 @@ body{
 }
 
 .div-waku{
-border: 5px solid black;
+border: 5px solid #2B2B2B;
  padding: 1px;
  width: 78%;
  top: 10px;
