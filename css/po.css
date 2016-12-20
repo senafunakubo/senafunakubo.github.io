@@ -1,11 +1,11 @@
 body{
-  background-image: url("../img/snow.jpg");
-  /*background-color: #98BF97;*/
+  background-image: url("../img/pap.png");
+  /*background-color: #E4E8DE;*/
   background-size: cover;
+  font-family: "Bungee", "Aref Ruqaa", arial;
 }
 
 #div-menu{
-  font-family: "Bungee", "Aref Ruqaa", arial;
   font-size: 10px;
   padding-left: 900px;
   text-shadow: 1px 1px 1px #C0C1EA;
@@ -17,9 +17,9 @@ body{
 }
 
 #div-pf{
-  font-family: "Bungee", "Aref Ruqaa", arial;
-  background-color:white;
-  padding-left: 3px;
+  border: 2px solid #2B2B2B;
+  background-color: #F7F7FF;
+  margin-left: 350px;
 }
 
 .div-profile1{
@@ -27,22 +27,32 @@ body{
   text-align: center;
 }
 
-.div-profile2 , .div-profile3{
+.div-profile2{
   font-size: 15px;
   text-align: center;
 }
 
 .div-waku{
-border: 5px solid #2B2B2B;
+border: 6px solid #2B2B2B;
+background-color: white;
  padding: 1px;
- width: 78%;
+ width: 65%;
  top: 10px;
- margin: 30px 0px 15px 35px;
+ margin: 30px 0px 15px 60px;
 }
 
 #div-sns{
-  font-size: 15px;
   text-align: right;
+  font-size: 8px;
+}
+
+div.work{
+  margin-left: 100px;
+}
+
+span.exp{
+  font-size: 20px;
+  padding-left: 15px;
 }
 
 div.PhotoBox {
@@ -86,6 +96,8 @@ div.PhotoBox p.Caption {
    margin: 0.5em;
 }
 
-/*span.smallmenu{
-  font-size: 15px;
-}*/
+span.prof{
+  padding-left: 20px;
+  font-family: "Raleway",arial;
+  font-size: 20px;
+}
