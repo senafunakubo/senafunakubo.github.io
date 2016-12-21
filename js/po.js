@@ -1,3 +1,7 @@
+setInterval(function() {
+    $('.flash, .flash1').fadeOut(500).fadeIn(500);
+}, 1000);
+
 $(function(){
 
    $(".PhotoBox").hover(function(){
