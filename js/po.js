@@ -27,5 +27,16 @@ $(function(){
    },function(){
       $(".SlideBox4",this).stop().animate({top:"200px"},"slow");
    });
-
 });
+
+(function($){
+    $(function() {
+
+        $('div.assignment').hover(function(){
+            $(this).find('p.captionas').fadeIn();
+        }, function() {
+            $(this).find('p.captionas').fadeOut();
+        });
+
+    });
+})(jQuery);
