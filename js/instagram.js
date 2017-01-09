@@ -7,7 +7,7 @@ var token = '3586492222.9462142.5174a0635898455bae025ce22d526bc9',
     dataType: 'jsonp',
     success: function(ist){
       // $("#myName").html(ist.data["full_name"]);
-      $('#loginArea').on('click', function() {
+      $('#178mo').on('click', function() {
         $("#myName").html(ist.data["full_name"]);
         $("#loginArea").hide();
         $("#logoutArea").show();
