@@ -1,7 +1,23 @@
 <html>
- <head><title>my instagram</title></head>
+ <head>
+  <title>my instagram</title>
+  <link rel="stylesheet" href="css/instagram.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src=js/instagram.js></script>
+ </head>
+
  <body>
-  <a href = https://www.instagram.com/oauth/authorize/?client_id=9462142fa0694440b76a797558ba8975&redirect_uri=https://senafunakubo.github.io/instagram.html&response_type=token>
-  login</a>
+  <div id="loginArea">
+   <a href = https://www.instagram.com/oauth/authorize/?client_id=9462142fa0694440b76a797558ba8975&redirect_uri=https://senafunakubo.github.io/instagram.html&response_type=token>Login</a>
+  </div>
+
+  <div id="infoArea">
+   <div id="myName"></div>
+  </div>
+
+  <div id="logoutArea">
+   <a href="instagram.html">Logout</a>
+  </div>
+
  </body>
 </html>
