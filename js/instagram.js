@@ -22,8 +22,7 @@ var token = '3586492222.9462142.5174a0635898455bae025ce22d526bc9',
     dataType: 'jsonp',
     type: 'GET',
     success: function(data){
-     console.log(data[0]);
-     document.getElementById('userName') = data[0];
+     $("#userName").html(data);
      //$("#userName").html(data[0]);
 
   }
