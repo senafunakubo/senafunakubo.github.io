@@ -17,3 +17,12 @@ var token = '3586492222.9462142.5174a0635898455bae025ce22d526bc9',
   });
 
 //if else
+
+  $.ajax({
+    url: 'https://api.instagram.com/v1/users/self/follows?access_token=' + token,
+    dataType: 'jsonp',
+    type: 'GET',
+    success: function(data){
+     console.log(data);
+ }
+ });
