@@ -21,7 +21,7 @@ var token = '3586492222.9462142.5174a0635898455bae025ce22d526bc9',
     url: 'https://api.instagram.com/v1/users/self/follows?access_token=' + token,
     dataType: 'jsonp',
     type: 'GET',
-    success: function(){
+    success: function(data){
      console.log(data[0][1]);
      document.getElementById('userName') = data[0][1];
      //$("#userName").html(data[0]);
