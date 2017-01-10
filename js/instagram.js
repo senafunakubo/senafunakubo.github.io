@@ -1,12 +1,12 @@
-var token = '3586492222.9462142.5174a0635898455bae025ce22d526bc9',
-    username = 'sena17824';
-
+var hash = window.location.hash;
+var token = hash.substr(14);
+if (hash.substr(0,14) == '#access_token=') {
   $.ajax({
     url: 'https://api.instagram.com/v1/users/self/?access_token='+ token,
     type: 'GET',
     dataType: 'jsonp',
     success: function(ist){
-      $('#178mo').on('click', function() {
+      $("#178mo").on('click', function() {
         $("#myName").html(ist.data["full_name"]);
         $("#loginArea").hide();
         $("#logoutArea").show();
@@ -15,8 +15,6 @@ var token = '3586492222.9462142.5174a0635898455bae025ce22d526bc9',
 
   });
 
-//if else
-
   $.ajax({
     url: 'https://api.instagram.com/v1/users/self/follows?access_token=' + token,
     dataType: 'jsonp',
@@ -24,12 +22,12 @@ var token = '3586492222.9462142.5174a0635898455bae025ce22d526bc9',
     success: function(data){
      $("#userName").html(data);
      //$("#userName").html(data[0]);
-  var json = $.parseJSON(data);
-  $(json).each(function(i,val){
-    $.each(val,function(k,v){
-      console.log(k + " : " + v);
-    });
+      for(let follower of data.data) {
+       $("#userName").append("<img src=" + follower.profile_picture + "><p>"+follower.full_name+"</p>");
+      }
+    }
   });
 
-  }
-});
+}else{
+  console.log("failed");
+}
