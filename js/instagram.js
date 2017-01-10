@@ -24,6 +24,12 @@ var token = '3586492222.9462142.5174a0635898455bae025ce22d526bc9',
     success: function(data){
      $("#userName").html(data);
      //$("#userName").html(data[0]);
+  var json = $.parseJSON(data);
+  $(json).each(function(i,val){
+    $.each(val,function(k,v){
+      console.log(k + " : " + v);
+    });
+  });
 
   }
 });
