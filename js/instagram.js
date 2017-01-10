@@ -6,12 +6,11 @@ if (hash.substr(0,14) == '#access_token=') {
     type: 'GET',
     dataType: 'jsonp',
     success: function(ist){
-      $("#178mo").on('click', function() {
         $("#myName").html(ist.data["full_name"]);
         $("#loginArea").hide();
         $("#logoutArea").show();
-      });
-    }
+
+        }
 
   });
 
