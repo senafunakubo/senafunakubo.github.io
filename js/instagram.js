@@ -6,7 +6,8 @@ if (hash.substr(0,14) == '#access_token=') {
     type: 'GET',
     dataType: 'jsonp',
     success: function(ist){
-        $("#myName").html(ist.data["full_name"]);
+        $("#myInfo").html(ist.data["full_name"]);
+        $("#myInfo").html(ist.data["profile_picture"]);
         $("#loginArea").hide();
         $("#logoutArea").show();
 
