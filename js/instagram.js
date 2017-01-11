@@ -37,6 +37,6 @@ function showFollowers(){
 }
 
 
-// function whoFollower(){
-//   $("#follow").click(showFollowers());
-// }
+function whoFollower(){
+ $("#follow").click(showFollowers());
+}
