@@ -7,10 +7,10 @@ if (hash.substr(0,14) == '#access_token=') {
     dataType: 'jsonp',
     success: function(ist){
         $("#myInfoName").html(ist.data["full_name"]);
-         console.log(ist.data.profile_picture);
-        // $("#myInfoPhoto").html("<img src=" + ist.data.profile_picture + ">");
-        $("#loginArea").hide();
-        $("#logoutArea").show();
+        $("#myInfoPhoto").append("<img src=" + ist.data.profile_picture + ">");
+          console.log(ist.data.profile_picture)
+        $("#login").hide();
+        $("#logout").show();
 
         }
 

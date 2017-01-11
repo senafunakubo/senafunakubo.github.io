@@ -1,3 +1,7 @@
-#logoutArea {
+body{
+  text-align: center;
+}
+
+#logout {
      display: none;
    }
