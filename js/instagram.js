@@ -38,5 +38,5 @@ function showFollowers(){
 
 
 function whoFollowers(){
- $("#follow").click(showFollowers());
+ $("#follow").click(showFollowers);
 }
