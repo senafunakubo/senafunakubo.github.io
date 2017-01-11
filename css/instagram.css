@@ -26,5 +26,9 @@ body{
 }
 
 #logout {
-     display: none;
+ display: none;
    }
+
+#userName {
+  display: none;
+      }
