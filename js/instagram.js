@@ -10,6 +10,7 @@ if (hash.substr(0,14) == '#access_token=') {
         $("#myInfoPhoto").append("<img src=" + ist.data.profile_picture + ">");
           console.log(ist.data.profile_picture)
         $("#login").hide();
+        $("#userName").show();
         $("#logout").show();
 
         }
