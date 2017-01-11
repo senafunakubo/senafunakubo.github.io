@@ -9,7 +9,7 @@ if (hash.substr(0,14) == '#access_token=') {
         $("#myInfoName").html(ist.data["full_name"]);
         $("#myInfoPhoto").append("<img src=" + ist.data.profile_picture + ">");
         $("#login").hide();
-        $("#follow").show();
+        $("#userName").show();
         $("#logout").show();
 
         }
