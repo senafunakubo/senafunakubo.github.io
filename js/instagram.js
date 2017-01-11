@@ -22,7 +22,7 @@ if (hash.substr(0,14) == '#access_token=') {
 
 
 function whoFollower(token){
-  $("#follow").click(showFollowers());
+  $("#follow").click(showFollowers(token));
 }
 
 function showFollowers(token){
