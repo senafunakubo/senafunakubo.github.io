@@ -9,28 +9,32 @@ if (hash.substr(0,14) == '#access_token=') {
         $("#myInfoName").html(ist.data["full_name"]);
         $("#myInfoPhoto").append("<img src=" + ist.data.profile_picture + ">");
         $("#login").hide();
+        $("#follow").show();
         $("#logout").show();
 
         }
 
   });
 
-  // $.ajax({
-  //   url: 'https://api.instagram.com/v1/users/self/follows?access_token=' + token,
-  //   dataType: 'jsonp',
-  //   type: 'GET',
-  //   success: function(data){
-  //    $("#userName").html(data);
-  //     for(let follower of data.data) {
-  //      $("#userName").append("<img src=" + follower.profile_picture + "><p>"+follower.full_name+"</p>");
-  //     }
-  //   }
-  // });
-
 }else{
   console.log("failed");
 }
 
-// function (){
-//
-// }
+function whoFollow(data){
+  $("#follow").click(showFollowers());
+}
+
+function showFollowers(){
+  $.ajax({
+   url: 'https://api.instagram.com/v1/users/self/follows?access_token=' + token,
+   dataType: 'jsonp',
+   type: 'GET',
+     success: function(data){
+      $("#userInfo").html(data);
+      for(let follower of data.data) {
+      $("#userInfo").append("<img src=" + follower.profile_picture + "><p>"+follower.full_name+"</p>");
+      }
+
+     }
+  });
+}

@@ -4,7 +4,7 @@ body{
   font-family: 'Patua One', cursive;
 }
 
-#userInfo{
+#userAllInfo{
   display: flex;
   flex-direction: row;
   flex: 1;
