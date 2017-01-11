@@ -10,7 +10,7 @@ if (hash.substr(0,14) == '#access_token=') {
         $("#myInfoPhoto").append("<img src=" + ist.data.profile_picture + ">");
         $("#login").hide();
         $("#userName").show();
-        showFollowers();
+        whoFollowers();
         $("#logout").show();
         }
 
@@ -37,6 +37,6 @@ function showFollowers(){
 }
 
 
-function whoFollower(){
+function whoFollowers(){
  $("#follow").click(showFollowers());
 }
