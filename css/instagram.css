@@ -3,7 +3,7 @@ body{
   font-family: 'Patua One', cursive;
 }
 
-#info{
+#userInfo{
   display: flex;
   flex: 1;
   min-height: 100vh;
