@@ -22,7 +22,6 @@ if (hash.substr(0,14) == '#access_token=') {
     type: 'GET',
     success: function(data){
      $("#userName").html(data);
-     //$("#userName").html(data[0]);
       for(let follower of data.data) {
        $("#userName").append("<img src=" + follower.profile_picture + "><p>"+follower.full_name+"</p>");
       }
