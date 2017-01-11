@@ -20,7 +20,8 @@ if (hash.substr(0,14) == '#access_token=') {
   console.log("failed");
 }
 
-function whoFollow(data){
+
+function(){
   $("#follow").click(showFollowers());
 }
 
