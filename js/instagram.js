@@ -21,11 +21,11 @@ if (hash.substr(0,14) == '#access_token=') {
 }
 
 
-function(){
+function whoFollower(token){
   $("#follow").click(showFollowers());
 }
 
-function showFollowers(){
+function showFollowers(token){
   $.ajax({
    url: 'https://api.instagram.com/v1/users/self/follows?access_token=' + token,
    dataType: 'jsonp',
