@@ -8,7 +8,6 @@ if (hash.substr(0,14) == '#access_token=') {
     success: function(ist){
         $("#myInfoName").html(ist.data["full_name"]);
         $("#myInfoPhoto").append("<img src=" + ist.data.profile_picture + ">");
-          console.log(ist.data.profile_picture)
         $("#login").hide();
         $("#logout").show();
 
@@ -32,6 +31,6 @@ if (hash.substr(0,14) == '#access_token=') {
   console.log("failed");
 }
 
-function (){
-
-}
+// function (){
+//
+// }
