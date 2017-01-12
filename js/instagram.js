@@ -13,7 +13,17 @@ if (hash.substr(0,14) == '#access_token=') {
         whoFollowers();
         $("#logout").show();
         }
+    });
 
+  $.ajax({
+    url: 'https://api.instagram.com/v1/media/search?lat=48.858844&lng=2.294351&access_token='+ token,
+    type: 'GET',
+    dataType: 'jsonp',
+    success: function(grm){
+      for(let user of grm.data) {
+      $("#myInfoPhoto").append("<img src=" + images.thumbnail.url + ">");
+      }
+    }
   });
 
 }else{
