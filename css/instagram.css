@@ -1,8 +1,17 @@
+html{
+  background-color: #CFD2CD;
+}
+
 body{
   font-size: 30px;
   text-align: center;
   font-family: 'Patua One', cursive;
 }
+
+#myInfoPhoto img{
+ border-radius: .5rem;
+}
+
 #followButton{
   display: none;
 }
@@ -22,7 +31,7 @@ body{
  border-radius: .5rem;
  margin: 1rem;
  font-size: 1rem;
- padding: 5rem;
+ padding: 2rem;
  width: 50rem;
  color: #535353;
 }

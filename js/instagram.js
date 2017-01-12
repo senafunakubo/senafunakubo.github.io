@@ -21,7 +21,7 @@ if (hash.substr(0,14) == '#access_token=') {
     dataType: 'jsonp',
     success: function(grm){
       console.log(grm);
-      $("#myInfoLocation").html(grm.data);
+      $("#myInfoLocation").html(grm.data["name"]);
     }
   });
 
