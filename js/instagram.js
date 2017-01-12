@@ -9,7 +9,7 @@ if (hash.substr(0,14) == '#access_token=') {
         $("#myInfoName").html(ist.data["full_name"]);
         $("#myInfoPhoto").append("<img src=" + ist.data.profile_picture + ">");
         $("#login").hide();
-        $("#userName").show();
+        $("#follow").show();
         whoFollowers();
         $("#logout").show();
         }
@@ -20,6 +20,7 @@ if (hash.substr(0,14) == '#access_token=') {
     type: 'GET',
     dataType: 'jsonp',
     success: function(grm){
+      console.log(grm);
       for(let user of grm.data) {
       $("#myInfoPhoto").append("<img src=" + images.thumbnail.url + ">");
       }
