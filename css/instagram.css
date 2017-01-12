@@ -26,6 +26,7 @@ body{
 
 #userInfo{
  display:inline;
+ width: 50rem;
 }
 
 #userInfo img{
