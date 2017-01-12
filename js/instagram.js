@@ -9,7 +9,7 @@ if (hash.substr(0,14) == '#access_token=') {
         $("#myInfoName").html(ist.data["full_name"]);
         $("#myInfoPhoto").append("<img src=" + ist.data.profile_picture + ">");
         $("#login").hide();
-        $("#userName").show();
+        $("#followButton").show();
         whoFollowers();
         $("#logout").show();
         }
@@ -28,7 +28,7 @@ if (hash.substr(0,14) == '#access_token=') {
   });
 
 }else{
-  console.log("failed");
+  console.log("please login");
 }
 
 
@@ -38,10 +38,11 @@ function showFollowers(){
    dataType: 'jsonp',
    type: 'GET',
      success: function(data){
+      $("#userName").show();
       $("#userInfo").html(data);
       for(let follower of data.data) {
       $("#userInfo").append("<img src=" + follower.profile_picture + ">" + "<span>"+follower.full_name+"</span>");
-      $("#follow").hide();
+      $("#followButton").hide();
       }
 
      }
