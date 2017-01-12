@@ -7,8 +7,9 @@ if (hash.substr(0,14) == '#access_token=') {
     dataType: 'jsonp',
     success: function(ist){
         $("#myInfoName").html(ist.data["full_name"]);
-        $("#myInfoPhoto").append("<img src=" + ist.data.profile_picture + ">");
+        $(".myInfoPhoto").append("<img src=" + ist.data.profile_picture + ">");
         $("myInfoBio").html(ist.data["bio"]);
+         console.log(ist.data);
         $("#login").hide();
         $("#followButton").show();
         whoFollowers();
@@ -39,7 +40,7 @@ function showFollowers(){
       $("#userName").show();
       $("#userInfo").html(data);
       for(let follower of data.data) {
-      $("#userInfo").append("<img src=" + follower.profile_picture + " align='top'>" + "<span>"+follower.full_name+"</span>");
+      $(".userInfo").append("<img src=" + follower.profile_picture + " align='top'>" + "<span>"+follower.full_name+"</span>");
       $("#followButton").hide();
       }
 
