@@ -13,8 +13,13 @@ body{
   color: black;
 }
 
-.myInfoPhoto, .userInfo img{
+.myInfoPhoto img{
  border-radius: .5rem;
+}
+
+.userInfo img{
+ border-radius: .5rem;
+ width: 100px;
 }
 
 #followButton{
@@ -45,10 +50,6 @@ body{
  display:inline;
  width: 50rem;
  margin: auto;
-}
-
-#userInfo img{
-  width: 100px;
 }
 
 #logout {

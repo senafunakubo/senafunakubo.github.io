@@ -1,6 +1,6 @@
-var hash = window.location.hash;
-var token = hash.substr(14);
-if (hash.substr(0,14) == '#access_token=') {
+ var hash = window.location.hash;
+ var token = hash.substr(14);
+ if (hash.substr(0,14) == '#access_token=') {
   $.ajax({
     url: 'https://api.instagram.com/v1/users/self/?access_token='+ token,
     type: 'GET',
@@ -8,7 +8,7 @@ if (hash.substr(0,14) == '#access_token=') {
     success: function(ist){
         $("#myInfoName").html(ist.data["full_name"]);
         $(".myInfoPhoto").append("<img src=" + ist.data.profile_picture + ">");
-        $("myInfoBio").html(ist.data["bio"]);
+        $("#myInfoBio").html(ist.data["bio"]);
          console.log(ist.data);
         $("#login").hide();
         $("#followButton").show();
@@ -17,18 +17,9 @@ if (hash.substr(0,14) == '#access_token=') {
         }
     });
 
-    $.ajax({
-      url: 'https://api.instagram.com/v1/locations/{location-id}?access_token='+ token,
-      type: 'GET',
-      dataType: 'jsonp',
-      success: function(lo){
-        console.log(lo);
-          }
-      });
-
-}else{
-  console.log("please login");
-}
+ }else{
+   console.log("please login");
+ }
 
 
 function showFollowers(){
