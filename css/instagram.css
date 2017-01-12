@@ -3,6 +3,9 @@ body{
   text-align: center;
   font-family: 'Patua One', cursive;
 }
+#followButton{
+  display: none;
+}
 
 #userAllInfo{
   display:flex;
