@@ -28,6 +28,10 @@ body{
  display:inline;
 }
 
+#userInfo img{
+  width: 100px;
+}
+
 #logout {
  display: none;
    }
