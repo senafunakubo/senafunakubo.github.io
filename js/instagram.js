@@ -15,15 +15,6 @@ if (hash.substr(0,14) == '#access_token=') {
         }
     });
 
-  $.ajax({
-    url: 'https://api.instagram.com/v1/locations/search?lat=48.858844&lng=2.294351&access_token='+ token,
-    type: 'GET',
-    dataType: 'jsonp',
-    success: function(grm){
-      console.log(grm);
-      $("#myInfoLocation").html(grm.data["name"]);
-    }
-  });
 
 }else{
   console.log("please login");

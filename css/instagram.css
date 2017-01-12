@@ -1,5 +1,5 @@
 html{
-  background-color: #CFD2CD;
+  background-color: #FFEFF1;
 }
 
 body{
@@ -27,7 +27,7 @@ body{
 
 #userName{
  display:none;
- border: .4rem solid black;
+ border: .4rem solid #E36588;
  border-radius: .5rem;
  margin: 1rem;
  font-size: 1rem;
