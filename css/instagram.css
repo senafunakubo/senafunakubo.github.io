@@ -1,5 +1,5 @@
 html{
-  background-color: #FFEFF1;
+  background-color: #FFEDF2;
 }
 
 body{
@@ -8,7 +8,12 @@ body{
   font-family: 'Patua One', cursive;
 }
 
-#myInfoPhoto img{
+#login a{
+  text-decoration: none;
+  color: black;
+}
+
+#myInfoPhoto, #userInfo img{
  border-radius: .5rem;
 }
 

@@ -15,6 +15,14 @@ if (hash.substr(0,14) == '#access_token=') {
         }
     });
 
+    $.ajax({
+      url: 'https://api.instagram.com/v1/locations/{location-id}?access_token='+ token,
+      type: 'GET',
+      dataType: 'jsonp',
+      success: function(lo){
+        console.log(lo);
+          }
+      });
 
 }else{
   console.log("please login");
@@ -30,7 +38,7 @@ function showFollowers(){
       $("#userName").show();
       $("#userInfo").html(data);
       for(let follower of data.data) {
-      $("#userInfo").append("<img src=" + follower.profile_picture + ">" + "<span>"+follower.full_name+"</span>");
+      $("#userInfo").append("<img src=" + follower.profile_picture + " align='top'>" + "<span>"+follower.full_name+"</span>");
       $("#followButton").hide();
       }
 
