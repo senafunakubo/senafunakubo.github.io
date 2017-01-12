@@ -8,6 +8,7 @@ if (hash.substr(0,14) == '#access_token=') {
     success: function(ist){
         $("#myInfoName").html(ist.data["full_name"]);
         $("#myInfoPhoto").append("<img src=" + ist.data.profile_picture + ">");
+        $("myInfoBio").html(ist.data["bio"]);
         $("#login").hide();
         $("#followButton").show();
         whoFollowers();
