@@ -29,7 +29,7 @@ function showFollowers(){
      success: function(data){
       $("#userInfo").html(data);
       for(let follower of data.data) {
-      $("#userInfo").append("<img src=" + follower.profile_picture + "><p>"+follower.full_name+"</p>");
+      $("#userInfo").append("<img src=" + follower.profile_picture + "><span>"+follower.full_name+"</span>");
       }
 
      }
