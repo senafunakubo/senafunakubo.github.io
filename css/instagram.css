@@ -1,5 +1,6 @@
 html{
-  background-color: #FFEDF2;
+  background-color: white;
+  color: #535353;
 }
 
 body{
@@ -26,6 +27,10 @@ body{
   margin: 10px;
 }
 
+#myPhoto{
+  font-size: 10px;
+}
+
 .userInfo img{
  border-radius: .5rem;
  width: 100px;
@@ -47,7 +52,7 @@ body{
 
 #userName{
  display:none;
- border: .4rem solid #E36588;
+ border: .3rem solid black;
  border-radius: .5rem;
  margin: 1rem;
  font-size: 1rem;

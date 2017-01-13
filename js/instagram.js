@@ -8,7 +8,7 @@
     success: function(ist){
         $("#myInfoName").html(ist.data["full_name"]);
         $(".myInfoPhoto").append("<img src=" + ist.data.profile_picture + ">");
-        $("#myInfoBio").html(ist.data["bio"] + "<br>" + "<span> Following: </span>" + ist.data.counts["follows"] +"<br>" + "<span> Followers: </span>" + ist.data.counts["followed_by"]);
+        $("#myInfoBio").html(ist.data["bio"] + "<br>" + "<span> Following: </span>" + ist.data.counts["follows"] +" / " + "<span> Followers: </span>" + ist.data.counts["followed_by"]);
         $("#login").hide();
         $("#followButton").show();
         whoFollowers();
@@ -23,9 +23,10 @@
     dataType: 'jsonp',
     success: function(myimg){
       for(var i = 0; i < myimg.data.length; i++){
-        $("#myPhoto").append("<img src=" + myimg.data[i].images.thumbnail["url"]+ ">");
-        console.log(myimg.data[i].images.thumbnail["url"]);
+        $("#myPhoto").append("<img src=" + myimg.data[i].images.standard_resolution["url"]+ ">");
+        // $("#myPhoto").append("<span class=captions>" + myimg.data[i].caption["text"] + "</p>");
       }
+
     }
   });
 
@@ -51,6 +52,9 @@ function showFollowers(){
   });
 }
 
+// function myCaption(){
+//   $("#myPhoto").append("<span>"+myimg.data[i].images.caption+"</span>")
+// }
 
 function whoFollowers(){
  $("#follow").click(showFollowers);
