@@ -3,7 +3,7 @@ html{
 }
 
 body{
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
   font-family: 'Patua One', cursive;
 }
@@ -13,13 +13,23 @@ body{
   color: black;
 }
 
+#myInfoBio{
+  font-size: 15px;
+}
+
 .myInfoPhoto img{
  border-radius: .5rem;
+}
+
+#myPhoto img{
+  width: 100px;
+  margin: 10px;
 }
 
 .userInfo img{
  border-radius: .5rem;
  width: 100px;
+ margin: 10px;
 }
 
 #followButton{
@@ -49,8 +59,7 @@ body{
 #userInfo{
  display:inline;
  width: 50rem;
- margin: auto;
-}
+ }
 
 #logout {
  display: none;
