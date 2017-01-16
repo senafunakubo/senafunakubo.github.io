@@ -33,26 +33,6 @@ if (hash.substr(0,14) == '#access_token='){
   console.log("please login");
 }
 
-
-function showFollowers(){
- $.ajax({
-   url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token='+ token,
-   type: 'GET',
-   dataType: 'jsonp',
-   success: function(myimg){
-     for(var i = 0; i < myimg.data.length; i++){
-       $("#myPhoto").append("<img src=" + myimg.data[i].images.standard_resolution["url"]+ ">");
-       // $("#myPhoto").append("<span class=captions>" + myimg.data[i].caption["text"] + "</p>");
-     }
-
-   }
- });
-
-}else{
-  console.log("please login");
-}
-
-
 function showFollowers(){
  $.ajax({
   url: 'https://api.instagram.com/v1/users/self/follows?access_token=' + token,
