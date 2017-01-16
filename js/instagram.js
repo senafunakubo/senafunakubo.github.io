@@ -1,6 +1,6 @@
 var hash = window.location.hash;
 var token = hash.substr(14);
-if (hash.substr(0,14) == '#access_token=') {
+if (hash.substr(0,14) == '#access_token='){
  $.ajax({
    url: 'https://api.instagram.com/v1/users/self/?access_token='+ token,
    type: 'GET',
