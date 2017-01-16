@@ -24,6 +24,7 @@ if (hash.substr(0,14) == '#access_token='){
    success: function(myimg){
      for(var i = 0; i < myimg.data.length; i++){
        $("#myPhoto").append("<a href='"+ myimg.data[i].link + "'><img src=" + myimg.data[i].images.standard_resolution["url"] + "></a>");
+
      }
    }
 
