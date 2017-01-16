@@ -30,7 +30,7 @@ if (hash.substr(0,14) == '#access_token='){
 
  });
 
-}else{
+} else {
   console.log("please login");
 }
 
