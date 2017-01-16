@@ -85,3 +85,11 @@ body{
   text-decoration: none;
   color: black;
 }
+
+a img{
+  padding: 1px 0 0 0;
+}
+
+a:hover img{
+  padding: 0 0 1px 0;
+}
