@@ -15,7 +15,6 @@
         $("#logout").show();
         }
     });
-<<<<<<< HEAD
 
 
   $.ajax({
@@ -35,14 +34,9 @@
    console.log("please login");
  }
 
-=======
-
->>>>>>> origin/master
 
 function showFollowers(){
   $.ajax({
-<<<<<<< HEAD
-=======
     url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token='+ token,
     type: 'GET',
     dataType: 'jsonp',
@@ -62,7 +56,6 @@ function showFollowers(){
 
 function showFollowers(){
   $.ajax({
->>>>>>> origin/master
    url: 'https://api.instagram.com/v1/users/self/follows?access_token=' + token,
    dataType: 'jsonp',
    type: 'GET',
@@ -78,13 +71,6 @@ function showFollowers(){
   });
 }
 
-<<<<<<< HEAD
-=======
-// function myCaption(){
-//   $("#myPhoto").append("<span>"+myimg.data[i].images.caption+"</span>")
-// }
-
->>>>>>> origin/master
 function whoFollowers(){
  $("#follow").click(showFollowers);
 }
