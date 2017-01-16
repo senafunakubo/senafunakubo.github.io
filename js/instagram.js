@@ -23,7 +23,8 @@ if (hash.substr(0,14) == '#access_token='){
    dataType: 'jsonp',
    success: function(myimg){
      for(var i = 0; i < myimg.data.length; i++){
-       $("#myPhoto").append("<img src=" + myimg.data[i].images.standard_resolution["url"] + ">");
+       $("#myPhoto").append("<a href="+ myimg.data[i].link + "><img src=" + myimg.data[i].images.standard_resolution["url"] + "></a>");
+       console.log(myimg.data[i].link);
      }
    }
 
