@@ -1,5 +1,9 @@
 html{
+<<<<<<< HEAD
+  background-color: #EAE3F2;
+=======
   background-color: white;
+>>>>>>> origin/master
   color: #535353;
 }
 
@@ -27,10 +31,13 @@ body{
   margin: 10px;
 }
 
+<<<<<<< HEAD
+=======
 #myPhoto{
   font-size: 10px;
 }
 
+>>>>>>> origin/master
 .userInfo img{
  border-radius: .5rem;
  width: 100px;
