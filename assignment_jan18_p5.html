@@ -1,0 +1,54 @@
+//
+//  main.c
+//  assignment_Jan18_P5
+//
+//  Created by Sena Funakubo on 2017-01-19.
+//  Copyright © 2017 Sena Funakubo. All rights reserved.
+//
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "time.h"
+
+unsigned getRandInterval(unsigned begin, unsigned end);
+
+int main(int argc, const char * argv[]) {
+
+    srand((unsigned)(time(NULL)));
+    int counter = getRandInterval(8,14);
+    int i;
+    printf("original:");
+    printf("%d\n",counter);
+    if(counter%2==1)
+    {
+        counter= counter +1;
+    }
+
+    for(i=counter; i>0; i=i/2)
+    {
+        for(int k=0; k<(counter-i)-k ;k++)
+        {
+            printf("m");
+        }
+
+        for(int j=0; j<i; j++)
+        {
+          printf("%d",j);
+        }
+
+        printf("\n");
+    }
+    return 0;
+}
+
+unsigned getRandInterval(unsigned begin, unsigned end)
+{
+    unsigned range = (end - begin) + 1;
+    unsigned limit = (RAND_MAX) - (RAND_MAX  % range);
+    unsigned randVal = rand();
+
+    while(randVal >= limit || randVal%7 == 6) randVal = rand();
+
+    return (randVal % range) + begin;
+}
