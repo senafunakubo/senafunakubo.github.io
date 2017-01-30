@@ -1,0 +1,34 @@
+//
+//  main.c
+//  assignment_Jan19_P7
+//
+//  Created by Sena Funakubo on 2017-01-20.
+//  Copyright © 2017 Sena Funakubo. All rights reserved.
+//
+
+// Problem 7
+// Write a function which takes two numbers and returns all prime numbers between the two numbers.
+
+#include <stdio.h>
+
+int putNumber(int num1, int num2);
+int main(int argc, const char * argv[]) {
+    putNumber(7,15);
+}
+
+int putNumber(int num1, int num2)
+{
+    int normalNumber=0;
+    int result=0;
+    for(int i= num1; i<num2; i++)
+    {
+        if(i%2==0){
+            normalNumber=i;
+        }
+        else{
+            printf("%d\n",i);
+            result = i;
+        }
+    }
+    return result;
+}
