@@ -1,0 +1,58 @@
+//
+//  main.c
+//  assignment_Jan19_P8
+//
+//  Created by Sena Funakubo on 2017-01-23.
+//  Copyright © 2017 Sena Funakubo. All rights reserved.
+//
+
+#include <stdio.h>
+
+void checkNumber(int num);
+int main(int argc, const char * argv[]) {
+    printf("Enter a number.");
+    int putNumber;
+    scanf("%d",&putNumber);
+    checkNumber(putNumber);
+        }
+
+void checkNumber(int num){
+   if(num%2==0)
+    {
+        printf("The number is even.\n");
+    }
+    else if(num%2==1)
+    {
+        printf("The number is odd.\n");
+    }
+
+    if(num%3==0)
+    {
+        printf("The number can be divided of 3.\n");
+    }
+    else
+    {
+        printf("The number cannot be divided of 3.\n");
+    }
+
+    if(num%7==0)
+    {
+        printf("The number can be divided of 7.\n");
+    }
+    else
+    {
+        printf("The number cannot be divided of 7.\n");
+    }
+
+    for(int i=2; i<=num; i++){
+     if(i==num)
+     {
+        printf("The number is prime number.\n");
+     }
+     else if(num%i==0)
+     {
+        printf("The number is normal number.\n");
+        break;
+     }
+    }
+}
