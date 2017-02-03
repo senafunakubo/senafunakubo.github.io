@@ -1,0 +1,36 @@
+//
+//  main.c
+//  Nanah
+//
+//  Created by Sena Funakubo on 2017-02-02.
+//  Copyright © 2017 Sena Funakubo. All rights reserved.
+//
+
+#include <stdio.h>
+#include <stdio.h>
+
+struct studentData
+{
+    char userName[50];
+    char passWord[10];
+    int studentId;
+    char firstName[20];
+    char lastName[20];
+    char gender[5];
+    int grade;
+    char courseId[50];
+    int mark;
+    char address[100];
+    int admission;
+}student;
+
+int main()
+{
+    struct studentData p;
+    p=student;
+    p.grade = 3;
+    strcpy(p.userName,"Sena");
+    printf("Username : %s",p.userName);
+    printf("\nGrade : %d\n",p.grade);
+    return 0;
+}
