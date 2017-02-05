@@ -1,0 +1,64 @@
+//
+//  main.c
+//  new_project1
+//
+//  Created by Sena Funakubo on 2017-02-03.
+//  Copyright © 2017 Sena Funakubo. All rights reserved.
+//
+
+#define _GNU_SOURCE
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char* substring(char* info, int startIndex, int endIndex);
+int main(int argc, char* argv[])
+{
+    FILE *fp;
+    char *fileName="/Users/senafunakubo/Documents/new_project1/new_project1/project_Accounts.txt";
+    char studentDataStrings[500];
+    char *result;
+    fp = fopen(fileName, "r");
+    if (!fp){
+        return 1;
+    }
+
+    while (fgets(studentDataStrings,sizeof(studentDataStrings), fp)!=NULL){
+//        printf("%s",studentDataStrings);
+        result = substring(studentDataStrings,8,17);
+        printf("[result]%s",result);
+        printf("\n\n");
+    }
+    printf("\n\n");
+//    result = substring(studentDataStrings,8,17);
+//    printf("[result]%s",result);
+//    printf("\n\n");
+
+    fclose(fp);
+    return 0;
+}
+
+//(e.g.)When you get "studentID:”7813007”\n" from Accounts.txt
+ char* substring(char* info, int startIndex, int endIndex)
+    {                 //info is "studentID:”7813007”\n", startIndex is 13, endIndex is 20
+    int counter = 0;
+    int length = 0;
+
+    while (counter<3) {//get a string of length //(e.g.)the strings is studentID:”7813007”
+        if(info[length]=='\xe2')//then count before 2nd '\xe2' to get the length
+        {
+            counter++;
+        }
+        length++;
+    }
+
+    int count = 0;
+    char* result = (char*) malloc(length * sizeof(char));// allocates memory of length
+    for(int i = startIndex; i < endIndex; i++)
+    {
+        result[count] = info[i];//copy 7813007 from "studentID:”7813007”\n"
+        count++;
+    }
+//        printf("%s",result);
+    return result;//return 7813007
+}
