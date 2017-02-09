@@ -1,10 +1,15 @@
 //
 //  main.c
-//  Project_Ali_sample
+//  Project_Nanah
 //
-//  Created by HannahPark on 2017-02-07.
-//  Copyright © 2017 HannahPark. All rights reserved.
+//  Created by Sena Funakubo on 2017-02-07.
+//  Copyright © 2017 SenaFunakubo. All rights reserved.
 //
+
+
+//Impediments
+//1.strcmpでのログインにおけるポインタ指定を全部にしたい（login1/password1じゃないとログイン成功しない）
+
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -26,9 +31,6 @@ struct Account{
     char* password;
 };
 
-//struct StudentsCouses{
-//}
-
 struct Student {
 
     char* studentID;
@@ -41,12 +43,21 @@ struct Student {
     int numberOfCourses;
 };
 
+struct StudentCourse{
+    char *studentID;
+    char *courseID;
+    int mark;
+};
 
 //Global Variables
 struct Student* listOfStudents;
 struct Account* listOfAccounts;
 struct Course* listOfCourses;
+struct StudentCourse *listOfStudentsCourses;
 
+void loginCheck(void);
+void showMenu(void);
+void showMenuOptions(void);
 char firstChar(char* line);
 int strLength(char* line);
 char* substring(char* line, int startIndex, int endIndex);
@@ -68,6 +79,9 @@ struct Account createAccounts(char* username, char* password);
 
 struct Course* getListOfCoursesFromFile(char* fileAddress, char* fileName, int* numberOfStudents);
 struct Course createCourses(char* CourseID, char* CourseName);
+
+struct StudentCourse *getListOfStudentsCoursesFromFile(char* fileAddress, char* fileName, int* numberOfStudentsCourses);
+struct StudentCourse createStudentsCourses(char *studentID,char *courseID,int mark);
 
 int main(int argc, const char * argv[]) {
 
@@ -96,53 +110,50 @@ int main(int argc, const char * argv[]) {
     listOfAccounts = getListOfAccountsFromFile(AccountsfileAddress, AccountsFileName, &numberOfAccounts);
 
 
-    //Accounts
+    char *StudentCoursesFileName = StudentsCoursesFile;
+    char *StudentCoursesFileAddress ="/Users/senafunakubo/Documents/Nanah/Nanah/StudentsCourses.txt";
+    int numberOfStudentsCourses = 0;
 
-    //    for(int i=0; i<10; i++)
-    //    {
-    //        //testing
-    //        for(int i=0; i<numberOfStudents; i++)
-    //        {
-    //            printf("%s\n", listOfStudents[i].name);
-    //            printf("%d\n", listOfStudents[i].numberOfCourses);
-    //            printf("%s\n", listOfStudents[i].address);
-    //            printf("%d\n", listOfStudents[i].grade);
-    //            printf("%d\n", listOfStudents[i].admission_year);
-    //
-    //            for(int j=0; j<listOfStudents[i].numberOfCourses; j++)
-    //            {
-    //                printf("\n%s", listOfStudents[i].courses[j]);
-    //            }
-    //
-    //            printf("\n============================\n");
-    //
-    //        }
-    //
-    //    }
-    //
-    //
+    listOfStudentsCourses = getListOfStudentsCoursesFromFile(StudentCoursesFileAddress,StudentCoursesFileName, &numberOfStudentsCourses);
 
-//  Students
 
-//    for(int i=0; i<numberOfAccounts; i++)
-//    {
-//        printf("%s\n", listOfAccounts[i].username);
-//        printf("%s\n", listOfAccounts[i].password);
-//
-//        printf("\n============================\n");
-//
-//    }
 
-    for(int i=0; i<numberOfCourses; i++)
-    {
-        printf("%s\n", listOfCourses[i].courseID);
-        printf("%s\n", listOfCourses[i].courseName);
-
-        printf("\n============================\n");
-
-    }
+    loginCheck();
 
     return 0;
+}
+
+void loginCheck(void){
+    printf("*********************************************************\n");
+    printf(" Please enter your account to login:\n");
+    printf("*********************************************************\n");
+    int a,b;
+    char studentId[30], password[30];
+    printf("\nUserID:");
+    scanf("%s",studentId);
+    printf("\nPassword:");
+    scanf("%s",password);
+    printf("\n\n");
+
+    a = strcmp(studentId,listOfAccounts->username);
+    b = strcmp(password,listOfAccounts->password);
+
+    if(a==0&&b==0)
+    {
+        printf("************************************************************\n");
+        printf("Welcome to Cornerstone International College of Canada.\n");
+        printf("************************************************************\n");
+        showMenuOptions();
+    }
+    else
+    {
+        printf("************************************************************\n");
+        printf("Your account does not exist. Please try again!\n");
+        printf("************************************************************\n");
+        printf("\n\n");
+        loginCheck();
+    }
+
 }
 
 int getTheStartIndex(char* filename, char firstChar)
@@ -338,57 +349,6 @@ char** splitString(char* a_str, const char a_delim, int* numberOfComponents)
 }
 
 
-//char** splitString(char* a_str, const char a_delim, int* numberOfComponents)
-//{
-//    char** result    = 0;
-//    size_t count     = 0;
-//    char* tmp        = a_str;
-//    char* last_comma = 0;
-//    char delim[2];
-//    delim[0] = a_delim;
-//    delim[1] = 0;
-//
-//    /* Count how many elements will be extracted. */
-//    while (*tmp)
-//    {
-//        if (a_delim == *tmp)
-//        {
-//            count++;
-//            last_comma = tmp;
-//        }
-//        tmp++;
-//    }
-//
-//    numberOfComponents = tmp;
-//
-//    /* Add space for trailing token. */
-//    count += last_comma < (a_str + strlen(a_str) - 1);
-//
-//    /* Add space for terminating null string so caller
-//     knows where the list of returned strings ends. */
-//    count++;
-//
-//    result = malloc(sizeof(char*) * count);
-//
-//    if (result)
-//    {
-//        size_t idx  = 0;
-//        char* token = strtok(a_str, delim);
-//
-//        while (token)
-//        {
-//            //assert(idx < count);
-//            *(result + idx++) = strdup(token);
-//            token = strtok(0, delim);
-//        }
-//        //assert(idx == count - 1);
-//        *(result + idx) = 0;
-//    }
-//
-//    return result;
-//}
-
-
 char** readFile(char* fileAddress, int* numberOfLines)
 
 {
@@ -519,6 +479,15 @@ struct Course createCourses(char* courseID, char* courseName)
     return *course;
 }
 
+struct StudentCourse createStudentsCourses(char *studentID,char *courseID,int mark)
+{
+    struct StudentCourse *studentCourse = (struct StudentCourse*)malloc(sizeof(struct StudentCourse));
+    (*studentCourse).studentID = studentID;
+    (*studentCourse).courseID = courseID;
+    (*studentCourse).mark = mark;
+
+    return *studentCourse;
+}
 
 struct Student* getListOfStudentFromFile(char* fileAddress, char* fileName, int* numberOfStudents)
 {
@@ -733,6 +702,7 @@ struct Course* getListOfCoursesFromFile(char* fileAddress, char* fileName, int* 
                 {
                     CourseName = substring(lines[indexOfLine], startIndex, lineLength-2);
                 }
+
             }//end of if
 
 
@@ -751,9 +721,148 @@ struct Course* getListOfCoursesFromFile(char* fileAddress, char* fileName, int* 
     return listOfCourses;
 }
 
+struct StudentCourse* getListOfStudentsCoursesFromFile(char* fileAddress, char* fileName, int* numberOfStudentsCourses)
+{
+
+    int numberOfStudentsCoursesReadFromFileSoFar = 0;
+
+    int numberOfLinesInTheFile = 0;
+    char** lines = readFile(fileAddress, &numberOfLinesInTheFile);
+
+    int numberOfLinesPerRecord = numberOfItemsPerRecordInFile(fileName);
+
+    int numberOfRecords = numberOfLinesInTheFile / numberOfLinesPerRecord;
+
+
+    struct StudentCourse* listOfStudentsCourses = (struct StudentCourse*) malloc(numberOfRecords*sizeof(struct StudentCourse));
+
+
+    for(int k=0; k<numberOfRecords; k++)
+    {
+        char *studentID = NULL;
+        char *courseID = NULL;
+        int mark = 0;
+
+        for(int i=0; i<numberOfLinesPerRecord; i++)
+        {
+            int indexOfLine = k*numberOfLinesPerRecord+i;
+
+            if(lines[indexOfLine]!=NULL)
+            {
+                //printf("\n%s\n", lines[indexOfLine]);
+                char firstCharacter = firstChar(lines[indexOfLine]);
+
+                int lineLength = strLength(lines[indexOfLine]);
+
+                int startIndex = getTheStartIndex(fileName, firstChar(lines[indexOfLine]));
+
+
+                if(firstCharacter=='1')
+                {
+                    studentID = substring(lines[indexOfLine], startIndex, lineLength-2);
+                }
+                else if(firstCharacter=='2')
+                {
+                    courseID = substring(lines[indexOfLine], startIndex, lineLength-2);
+                }
+                else if(firstCharacter=='3')
+                {
+                    char* markStr = substring(lines[indexOfLine], startIndex, lineLength-2);
+                    mark = convertToNumber(markStr);
+                }
+            }//end of if
+
+
+        }//end of second for
+
+
+        struct StudentCourse StudentsCourses= createStudentsCourses(studentID,courseID,mark);
+        listOfStudentsCourses[numberOfStudentsCoursesReadFromFileSoFar] = StudentsCourses;
+
+        numberOfStudentsCoursesReadFromFileSoFar++;
+
+
+    }//end of first for
+
+    *numberOfStudentsCourses = numberOfStudentsCoursesReadFromFileSoFar;
+    return listOfStudentsCourses;
+}
+
+
 
 int convertToNumber(char * string)
 {
     int number = atoi( string );
     return number;
+}
+
+void showMenu(void)
+{
+    int input;
+    printf("Enter the number corresponding to each item to proceed: ");
+    scanf("%d", &input);
+
+    while (input!=9) {
+
+        if(input==1)
+        {
+            printf("[1] Print my enrolment certificate\n");
+            printf("Dear\n");
+            break;
+        }
+        else if(input==2)
+        {
+            //[2] Print my courses
+        }
+        else if(input==3)
+        {
+            //[3] Print my transcript
+        }
+        else if(input==4)
+        {
+            //[4] Print my GPA
+        }
+        else if(input==5)
+        {
+            //[5] Print my ranking among all studentsin the college
+        }
+        else if(input==6)
+        {
+            printf("[6] List all available courses\n");
+            break;
+        }
+        else if(input==7)
+        {
+            //[7] List all students
+        }
+        else if(input==8)
+        {
+            //[8] Logout
+        }
+
+        //        showMenuOptions();
+        //        scanf("%d", &input);
+
+    }//end of while
+    printf("\n*********************************************\n");
+}
+
+void showMenuOptions(void)
+{
+    printf("\n*********************************************************\n");
+    printf(" Select from the options:");
+    printf("\n*********************************************************\n");
+
+    printf("[1] Print my enrolment certificate\n");
+    printf("[2] Print my courses\n");
+    printf("[3] Print my transcript\n");
+    printf("[4] Print my GPA\n");
+    printf("[5] Print my ranking among all studentsin the college\n");
+    printf("[6] List all available courses\n");
+    printf("[7] List all students\n");
+    printf("[8] Logout\n");
+    printf("[9] Exit\n");
+
+    printf("\n==============================\n");
+    showMenu();
 }
