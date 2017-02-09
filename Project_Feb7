@@ -8,7 +8,7 @@
 
 
 //Impediments
-//1.strcmpでのログインにおけるポインタ指定を全部にしたい（login1/password1じゃないとログイン成功しない）
+//
 
 
 #include <stdio.h>
@@ -55,6 +55,13 @@ struct Account* listOfAccounts;
 struct Course* listOfCourses;
 struct StudentCourse *listOfStudentsCourses;
 
+struct Account curentlyLoggedinAccount;
+
+int numberOfAccounts;
+int numberOfStudents;
+int numberOfStudentsCourses;
+int numberOfCourses;
+
 void loginCheck(void);
 void showMenu(void);
 void showMenuOptions(void);
@@ -88,7 +95,7 @@ int main(int argc, const char * argv[]) {
 
     char* CoursesFileName = CoursesFile;
     char* CoursesFileAddress = "/Users/senafunakubo/Documents/Nanah/Nanah/Courses.txt";
-    int numberOfCourses = 0;
+    numberOfCourses = 0;
 
     listOfCourses = getListOfCoursesFromFile(CoursesFileAddress, CoursesFileName, &numberOfCourses);
 
@@ -97,7 +104,7 @@ int main(int argc, const char * argv[]) {
     //Extracting students information from the file
     char* studentsFileName = StudentsFile;
     char* studentsfileAddress = "/Users/senafunakubo/Documents/Nanah/Nanah/Students.txt";
-    int numberOfStudents = 0;
+    numberOfStudents = 0;
 
     listOfStudents = getListOfStudentFromFile(studentsfileAddress, studentsFileName, &numberOfStudents);
 
@@ -105,14 +112,14 @@ int main(int argc, const char * argv[]) {
 
     char* AccountsFileName = AccountsFile;
     char* AccountsfileAddress = "/Users/senafunakubo/Documents/Nanah/Nanah/Accounts.txt";
-    int numberOfAccounts = 0;
+    numberOfAccounts = 0;
 
     listOfAccounts = getListOfAccountsFromFile(AccountsfileAddress, AccountsFileName, &numberOfAccounts);
 
 
     char *StudentCoursesFileName = StudentsCoursesFile;
     char *StudentCoursesFileAddress ="/Users/senafunakubo/Documents/Nanah/Nanah/StudentsCourses.txt";
-    int numberOfStudentsCourses = 0;
+    numberOfStudentsCourses = 0;
 
     listOfStudentsCourses = getListOfStudentsCoursesFromFile(StudentCoursesFileAddress,StudentCoursesFileName, &numberOfStudentsCourses);
 
@@ -135,11 +142,20 @@ void loginCheck(void){
     scanf("%s",password);
     printf("\n\n");
 
-    a = strcmp(studentId,listOfAccounts->username);
-    b = strcmp(password,listOfAccounts->password);
+    int found = 0;
+    for(int i=0; i<numberOfAccounts;i++){
+        a = strcmp(studentId,listOfAccounts[i].username);
+        b = strcmp(password,listOfAccounts[i].password);
 
-    if(a==0&&b==0)
-    {
+        if(a==0&&b==0)
+        {
+            curentlyLoggedinAccount = listOfAccounts[i];
+            found = 1;
+            break;
+        }
+    }
+
+    if (found==1) {
         printf("************************************************************\n");
         printf("Welcome to Cornerstone International College of Canada.\n");
         printf("************************************************************\n");
