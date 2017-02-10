@@ -55,6 +55,7 @@ struct StudentCourse *listOfStudentsCourses;
 
 struct Account currentlyLoggedinAccount;
 struct Student currentlyLoggedinStudent;
+struct timespec  req = {0,200 * MILLI_SEC};
 
 int numberOfAccounts;
 int numberOfStudents;
@@ -71,6 +72,7 @@ float printMyGPA(struct Account account);
 void printMyRanking(struct Account account);
 void listAllCourses(void);
 void listAllStudents(void);
+void resetAccount(void);
 
 
 char firstChar(char* line);
@@ -163,7 +165,6 @@ void loginCheck(void){
     }
 
     if (found==1) {
-        struct timespec  req = {0,200 * MILLI_SEC};
 
         if (nanosleep(&req,NULL) == 0){
          printf("************************************************************\n");
@@ -292,7 +293,7 @@ float printMyTranscript(struct Account account){
         {
          total += listOfStudentsCourses[i].mark;
         }
-        printf("YOUR GPA IS:");
+        printf("YOUR GPA IS: %f\n",total/(float)currentlyLoggedinStudent.numberOfCourses);
     }
 
     return total/(float)currentlyLoggedinStudent.numberOfCourses;
@@ -323,7 +324,7 @@ float getMyGPA(struct Account account){
         {
             total += listOfStudentsCourses[i].mark;
         }
-        printf("YOUR GPA IS: ");
+        printf("YOUR GPA IS: %f\n",total/(float)currentlyLoggedinStudent.numberOfCourses);
     }
     return total/(float)currentlyLoggedinStudent.numberOfCourses;
 }
@@ -1022,91 +1023,87 @@ void showMenu(void)
     printf("Enter the number corresponding to each item to proceed: ");
     scanf("%d", &input);
 
-    if(&input<0 || input>=10)
-    {
-        printf("You entered a wrong number! Please try again.\n");
-        showMenu();
-    }
+    switch(input){
 
-    while (input!=9) {
-
-        if(input==1)
-        {
-//            printf("[1] Print my enrolment certificate\n\n");
+        case 1:
             enrolmentCertificate(currentlyLoggedinAccount);  //current~Accountのデータをここで送っている
             showMenuOptions();
             break;
-        }
-        else if(input==2)
-        {
-//            printf("[2] Print my courses\n\n");
+
+        case 2:
             printMyCourses(currentlyLoggedinAccount);
             showMenuOptions();
             break;
-        }
-        else if(input==3)
-        {
-//            printf("[3] Print my transcript\n\n");
-            float myGPA = printMyTranscript(currentlyLoggedinAccount);
-            printf("%f",myGPA);
+
+        case 3:
+            printMyTranscript(currentlyLoggedinAccount);
             showMenuOptions();
             break;
-        }
-        else if(input==4)
-        {
-//            printf("[4] Print my GPA\n\n");
-            float myGPA = getMyGPA(currentlyLoggedinAccount); //floatで受け取る
-            printf("%f",myGPA);
+
+        case 4:
+            getMyGPA(currentlyLoggedinAccount);
             showMenuOptions();
             break;
-        }
-        else if(input==5)
-        {
-//            printf("[5] Print my ranking among all studentsin the college\n\n");
+
+        case 5:
             printMyRanking(currentlyLoggedinAccount);
             showMenuOptions();
             break;
-        }
-        else if(input==6)
-        {
-//            printf("[6] List all available courses\n\n");
+
+        case 6:
             listAllCourses();
             showMenuOptions();
             break;
-        }
-        else if(input==7)
-        {
-//            printf("[7] List all students\n\n");
+
+        case 7:
             listAllStudents();
             showMenuOptions();
             break;
-        }
-        else if(input==8)
-        {
-//            [8] Logout
-        }
 
+        case 8:
+            printf("You selected Logout.\n\n");
+            resetAccount();
+            if (nanosleep(&req,NULL) == 0)
+            {
+                loginCheck();
+            }
+            break;
 
-    }//end of while
+        case 9:
+            printf("See you!\n");
+            exit(1);
+            break;
+
+        default:
+            printf("You entered a wrong number! Please try again.\n");
+            showMenu();
+
+    }//end of switch
     printf("\n*********************************************\n");
+}
+
+void resetAccount(void){
+  currentlyLoggedinAccount.username = 0;
+  currentlyLoggedinAccount.password = 0;
 }
 
 void showMenuOptions(void)
 {
-    printf("\n*********************************************************\n");
-    printf(" Select from the options:");
-    printf("\n*********************************************************\n");
+      printf("\n*********************************************************\n");
+      printf(" Select from the options:");
+      printf("\n*********************************************************\n");
 
-    printf("[1] Print my enrolment certificate\n");
-    printf("[2] Print my courses\n");
-    printf("[3] Print my transcript\n");
-    printf("[4] Print my GPA\n");
-    printf("[5] Print my ranking among all students in the college\n");
-    printf("[6] List all available courses\n");
-    printf("[7] List all students\n");
-    printf("[8] Logout\n");
-    printf("[9] Exit\n");
+      printf("[1] Print my enrolment certificate\n");
+      printf("[2] Print my courses\n");
+      printf("[3] Print my transcript\n");
+      printf("[4] Print my GPA\n");
+      printf("[5] Print my ranking among all students in the college\n");
+      printf("[6] List all available courses\n");
+      printf("[7] List all students\n");
+      printf("[8] Logout\n");
+      printf("[9] Exit\n");
 
-    printf("\n==============================\n");
-    showMenu();
+      printf("\n==============================\n");
+      showMenu();
+
 }
