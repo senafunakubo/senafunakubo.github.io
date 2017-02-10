@@ -7,10 +7,6 @@
 //
 
 
-//Impediments
-//
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -55,7 +51,8 @@ struct Account* listOfAccounts;
 struct Course* listOfCourses;
 struct StudentCourse *listOfStudentsCourses;
 
-struct Account curentlyLoggedinAccount;
+struct Account currentlyLoggedinAccount;
+struct Student currentlyLoggedinStudent;
 
 int numberOfAccounts;
 int numberOfStudents;
@@ -65,6 +62,13 @@ int numberOfCourses;
 void loginCheck(void);
 void showMenu(void);
 void showMenuOptions(void);
+void enrolmentCertificate(struct Account account);
+void printMyCourses(struct Account account);
+void printMyTranscript(struct Account account);
+float printMyGPA(struct Account account);
+void printMyRanking(struct Account account);
+
+
 char firstChar(char* line);
 int strLength(char* line);
 char* substring(char* line, int startIndex, int endIndex);
@@ -124,7 +128,6 @@ int main(int argc, const char * argv[]) {
     listOfStudentsCourses = getListOfStudentsCoursesFromFile(StudentCoursesFileAddress,StudentCoursesFileName, &numberOfStudentsCourses);
 
 
-
     loginCheck();
 
     return 0;
@@ -149,7 +152,7 @@ void loginCheck(void){
 
         if(a==0&&b==0)
         {
-            curentlyLoggedinAccount = listOfAccounts[i];
+            currentlyLoggedinAccount = listOfAccounts[i];
             found = 1;
             break;
         }
@@ -171,6 +174,214 @@ void loginCheck(void){
     }
 
 }
+
+void enrolmentCertificate(struct Account account){
+    int a;
+    int found=0;
+//    char* username = account.username;
+    for(int i=0; i<numberOfStudents;i++)
+    {
+        a= strcmp(listOfStudents[i].studentID,account.username);
+
+        if(a==0)
+        {
+            found =1;
+            currentlyLoggedinStudent = listOfStudents[i];
+            break;
+        }
+    }
+
+    if(found==1)
+    {
+
+      char* title = NULL;
+      if(strcmp(currentlyLoggedinStudent.gender,"female")==0){
+
+        title = "She";
+
+      }else{
+        title= "He";
+      }
+
+      printf("This is to certify that %s with student id %s is a student at grade %d at CICCC.\n", currentlyLoggedinStudent.name, currentlyLoggedinStudent.studentID,currentlyLoggedinStudent.grade);
+      printf("%s was admitted to our college in %d and has taken %d course(s).\n",title,currentlyLoggedinStudent.admission_year,currentlyLoggedinStudent.numberOfCourses);
+      printf("Currently %s resides at %s.\n",title,currentlyLoggedinStudent.address);
+      printf("If you have any question, please don’t hesitate to contact us.\n");
+
+        showMenuOptions();
+
+    }else{
+        printf("Error!");
+    }
+}//end of the function
+
+
+void printMyCourses(struct Account account){
+    int a;
+    int found=0;
+//    char* username = account.username;
+    for(int i=0; i<numberOfStudents;i++)
+    {
+        a= strcmp(listOfStudents[i].studentID,account.username);
+
+        if(a==0)
+        {
+            found =1;
+            currentlyLoggedinStudent = listOfStudents[i];
+            break;
+        }
+    }
+
+         if(found==1)
+         {
+            printf("Hi %s,\n",currentlyLoggedinStudent.name);
+            printf("You have taken the following courses: \n");
+
+             for(int i=0; i<currentlyLoggedinStudent.numberOfCourses;i++){
+
+                 if(strcmp(currentlyLoggedinStudent.courses[i],listOfCourses[i].courseID)==0)
+                 {
+                     if(strcmp(currentlyLoggedinStudent.courses[i],"MADP101")==0)
+                     {
+                         printf("1) %s: %s\n",currentlyLoggedinStudent.courses[i],listOfCourses[i].courseName);
+                     }
+                     else if(strcmp(currentlyLoggedinStudent.courses[i],"MADP202")==0)
+                     {
+                         printf("2) %s: %s\n",currentlyLoggedinStudent.courses[i],listOfCourses[i].courseName);
+                     }
+                     else if(strcmp(currentlyLoggedinStudent.courses[i],"MADP301")==0)
+                     {
+                         printf("3) %s: %s\n",currentlyLoggedinStudent.courses[i],listOfCourses[i].courseName);
+                     }
+                     else if(strcmp(currentlyLoggedinStudent.courses[i],"MADP401")==0)
+                     {
+                         printf("4) %s: %s\n",currentlyLoggedinStudent.courses[i],listOfCourses[i].courseName);
+                     }
+
+                 }
+
+             }//end of the for loop
+
+             showMenuOptions();
+
+         }
+
+}// end of the function
+
+
+void printMyTranscript(struct Account account){
+    int a,total;
+    int found=0;
+    for(int i=0; i<numberOfStudents;i++)
+    {
+        a= strcmp(listOfStudents[i].studentID,account.username);
+
+        if(a==0)
+        {
+            found =1;
+            currentlyLoggedinStudent = listOfStudents[i];
+            break;
+        }
+    }
+
+    if(found==1)
+    {
+        printf("Hi %s,\n",currentlyLoggedinStudent.name);
+        printf("Here is your transcript: \n");
+
+        for(int i=0; i<currentlyLoggedinStudent.numberOfCourses;i++){
+
+            if(strcmp(currentlyLoggedinStudent.courses[i],listOfStudentsCourses[i].courseID)==0)
+            {
+                if(strcmp(currentlyLoggedinStudent.courses[i],"MADP101")==0)
+                {
+                    printf("1) %s: %s: %d\n",currentlyLoggedinStudent.courses[i],listOfCourses[i].courseName,listOfStudentsCourses[i].mark);
+                }
+                else if(strcmp(currentlyLoggedinStudent.courses[i],"MADP202")==0)
+                {
+                    printf("2) %s: %s: %d\n",currentlyLoggedinStudent.courses[i],listOfCourses[i].courseName,listOfStudentsCourses[i].mark);
+                }
+                else if(strcmp(currentlyLoggedinStudent.courses[i],"MADP301")==0)
+                {
+                    printf("3) %s: %s: %d\n",currentlyLoggedinStudent.courses[i],listOfCourses[i].courseName,listOfStudentsCourses[i].mark);
+                }
+                else if(strcmp(currentlyLoggedinStudent.courses[i],"MADP401")==0)
+                {
+                    printf("4) %s: %s: %d\n",currentlyLoggedinStudent.courses[i],listOfCourses[i].courseName,listOfStudentsCourses[i].mark);
+                }
+
+            }
+
+        }//end of the for loop
+
+        for(int i=0; i<currentlyLoggedinStudent.numberOfCourses;i++)
+        {
+         total += listOfStudentsCourses[i].mark;
+        }
+        printf("YOUR GPA IS: %f\n",total/(float)currentlyLoggedinStudent.numberOfCourses);
+        showMenuOptions();
+    }
+
+}
+
+float getMyGPA(struct Account account){
+    int a,total;
+    int found=0;
+    for(int i=0; i<numberOfStudents;i++)
+    {
+        a= strcmp(listOfStudents[i].studentID,account.username);
+
+        if(a==0)
+        {
+            found =1;
+            currentlyLoggedinStudent = listOfStudents[i];
+            break;
+        }
+    }
+
+    if(found==1)
+    {
+        printf("Hi %s,\n",currentlyLoggedinStudent.name);
+
+        for(int i=0; i<currentlyLoggedinStudent.numberOfCourses;i++)
+        {
+            total += listOfStudentsCourses[i].mark;
+        }
+        printf("YOUR GPA IS: %f\n",total/(float)currentlyLoggedinStudent.numberOfCourses);
+//        showMenuOptions();
+    }
+    return total/(float)currentlyLoggedinStudent.numberOfCourses;
+}
+
+void printMyRanking(struct Account account){
+    int a,total;
+    int found=0;
+
+    for(int i=0; i<numberOfStudents;i++)
+    {
+        a= strcmp(listOfStudents[i].studentID,account.username);
+
+        if(a==0)
+        {
+            found =1;
+            currentlyLoggedinStudent = listOfStudents[i];
+            break;
+        }
+    }
+
+    if(found==1)
+    {
+        printf("Hi %s,\n",currentlyLoggedinStudent.name);
+
+        for(int i=0; i<currentlyLoggedinStudent.numberOfCourses;i++)
+        {
+            total += listOfStudentsCourses[i].mark;
+        }
+        printf("YOUR GPA IS: %f and therefore your rank is \n",total/(float)currentlyLoggedinStudent.numberOfCourses);
+    }
+
+}
+
 
 int getTheStartIndex(char* filename, char firstChar)
 {
@@ -712,11 +923,11 @@ struct Course* getListOfCoursesFromFile(char* fileAddress, char* fileName, int* 
 
                 if(firstCharacter=='1')
                 {
-                    CourseID = substring(lines[indexOfLine], startIndex, lineLength-2);
+                    CourseID = substring(lines[indexOfLine], startIndex+1, lineLength-2);
                 }
                 else if(firstCharacter=='2')
                 {
-                    CourseName = substring(lines[indexOfLine], startIndex, lineLength-2);
+                    CourseName = substring(lines[indexOfLine], startIndex+1, lineLength-2);
                 }
 
             }//end of if
@@ -822,25 +1033,35 @@ void showMenu(void)
 
         if(input==1)
         {
-            printf("[1] Print my enrolment certificate\n");
-            printf("Dear\n");
+            printf("[1] Print my enrolment certificate\n\n");
+            enrolmentCertificate(currentlyLoggedinAccount);  //current~Accountのデータをここで送っている
             break;
         }
         else if(input==2)
         {
-            //[2] Print my courses
+            printf("[2] Print my courses\n\n");
+            printMyCourses(currentlyLoggedinAccount);
+            break;
         }
         else if(input==3)
         {
-            //[3] Print my transcript
+            printf("[3] Print my transcript\n\n");
+            printMyTranscript(currentlyLoggedinAccount);
+            break;
         }
         else if(input==4)
         {
-            //[4] Print my GPA
+            printf("[4] Print my GPA\n\n");
+            float myGPA = getMyGPA(currentlyLoggedinAccount);
+            printf("%f",myGPA);
+            showMenuOptions();
+            break;
         }
         else if(input==5)
         {
-            //[5] Print my ranking among all studentsin the college
+            printf("[5] Print my ranking among all studentsin the college\n\n");
+            printMyRanking(currentlyLoggedinAccount);
+            break;
         }
         else if(input==6)
         {
@@ -873,7 +1094,7 @@ void showMenuOptions(void)
     printf("[2] Print my courses\n");
     printf("[3] Print my transcript\n");
     printf("[4] Print my GPA\n");
-    printf("[5] Print my ranking among all studentsin the college\n");
+    printf("[5] Print my ranking among all students in the college\n");
     printf("[6] List all available courses\n");
     printf("[7] List all students\n");
     printf("[8] Logout\n");
