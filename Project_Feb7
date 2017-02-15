@@ -77,7 +77,7 @@ void printMyRanking(struct Account account);
 void listAllCourses(void);
 void printAllStudents(void);
 void resetAccount(void);
-int getAllGPA(void);
+int getAllGPA(float mygpa);
 
 char firstChar(char* line);
 int strLength(char* line);
@@ -108,7 +108,7 @@ struct StudentCourse createStudentsCourses(char *studentID,char *courseID,int ma
 
 int main(int argc, const char * argv[]) {
     char* CoursesFileName = CoursesFile;
-    char* CoursesFileAddress = "/Users/senafunakubo/Documents/Nanah/Nanah/Courses.txt";
+    char* CoursesFileAddress = "/Users/senafunakubo/Documents/new_project1/new_project1/Courses.txt";
     numberOfCourses = 0;
 
     listOfCourses = getListOfCoursesFromFile(CoursesFileAddress, CoursesFileName, &numberOfCourses);
@@ -117,7 +117,7 @@ int main(int argc, const char * argv[]) {
 
     //Extracting students information from the file
     char* studentsFileName = StudentsFile;
-    char* studentsfileAddress = "/Users/senafunakubo/Documents/Nanah/Nanah/Students.txt";
+    char* studentsfileAddress = "/Users/senafunakubo/Documents/new_project1/new_project1/Students.txt";
     numberOfStudents = 0;
 
     listOfStudents = getListOfStudentFromFile(studentsfileAddress, studentsFileName, &numberOfStudents);
@@ -125,14 +125,14 @@ int main(int argc, const char * argv[]) {
 
 
     char* AccountsFileName = AccountsFile;
-    char* AccountsfileAddress = "/Users/senafunakubo/Documents/Nanah/Nanah/Accounts.txt";
+    char* AccountsfileAddress = "/Users/senafunakubo/Documents/new_project1/new_project1/Accounts.txt";
     numberOfAccounts = 0;
 
     listOfAccounts = getListOfAccountsFromFile(AccountsfileAddress, AccountsFileName, &numberOfAccounts);
 
 
     char *StudentCoursesFileName = StudentsCoursesFile;
-    char *StudentCoursesFileAddress ="/Users/senafunakubo/Documents/Nanah/Nanah/StudentsCourses.txt";
+    char *StudentCoursesFileAddress ="/Users/senafunakubo/Documents/new_project1/new_project1/StudentsCourses.txt";
     numberOfStudentsCourses = 0;
 
     listOfStudentsCourses = getListOfStudentsCoursesFromFile(StudentCoursesFileAddress,StudentCoursesFileName, &numberOfStudentsCourses);
@@ -171,9 +171,9 @@ void loginCheck(void){
     if (found==1) {
 
         if (nanosleep(&req,NULL) == 0){
-         printf("************************************************************\n");
-         printf(" Welcome to Cornerstone International College of Canada.\n");
-         printf("************************************************************\n");
+            printf("************************************************************\n");
+            printf(" Welcome to Cornerstone International College of Canada.\n");
+            printf("************************************************************\n");
         }
         showMenuOptions();
     }
@@ -206,19 +206,19 @@ void enrolmentCertificate(struct Account account){
     if(found==1)
     {
 
-      char* title = NULL;
-      if(strcmp(currentlyLoggedinStudent.gender,"female")==0){
+        char* title = NULL;
+        if(strcmp(currentlyLoggedinStudent.gender,"female")==0){
 
-        title = "She";
+            title = "She";
 
-      }else{
-        title= "He";
-      }
+        }else{
+            title= "He";
+        }
 
-      printf("This is to certify that %s with student id %s is a student at grade %d at CICCC.\n", currentlyLoggedinStudent.name, currentlyLoggedinStudent.studentID,currentlyLoggedinStudent.grade);
-      printf("%s was admitted to our college in %d and has taken %d course(s).\n",title,currentlyLoggedinStudent.admission_year,currentlyLoggedinStudent.numberOfCourses);
-      printf("Currently %s resides at %s.\n",title,currentlyLoggedinStudent.address);
-      printf("If you have any question, please don’t hesitate to contact us.\n");
+        printf("This is to certify that %s with student id %s is a student at grade %d at CICCC.\n", currentlyLoggedinStudent.name, currentlyLoggedinStudent.studentID,currentlyLoggedinStudent.grade);
+        printf("%s was admitted to our college in %d and has taken %d course(s).\n",title,currentlyLoggedinStudent.admission_year,currentlyLoggedinStudent.numberOfCourses);
+        printf("Currently %s resides at %s.\n",title,currentlyLoggedinStudent.address);
+        printf("If you have any question, please don’t hesitate to contact us.\n");
 
     }
     else
@@ -245,21 +245,21 @@ void printMyCourses(struct Account account){
         }
     }
 
-         if(found==1)
-         {
-            printf("Hi %s,\n",currentlyLoggedinStudent.name);
-            printf("You have taken the following courses: \n");
+    if(found==1)
+    {
+        printf("Hi %s,\n",currentlyLoggedinStudent.name);
+        printf("You have taken the following courses: \n");
 
-             for(int i=0; i<currentlyLoggedinStudent.numberOfCourses;i++){
+        for(int i=0; i<currentlyLoggedinStudent.numberOfCourses;i++){
 
-                 if(strcmp(currentlyLoggedinStudent.courses[i],listOfStudentsCourses[i].courseID)==0)
-                 {
-                     printf("%d) %s: %s\n",i+1,currentlyLoggedinStudent.courses[i],listOfCourses[i].courseName);
-                 }
+            if(strcmp(currentlyLoggedinStudent.courses[i],listOfStudentsCourses[i].courseID)==0)
+            {
+                printf("%d) %s: %s\n",i+1,currentlyLoggedinStudent.courses[i],listOfCourses[i].courseName);
+            }
 
-             }//end of the for loop
+        }//end of the for loop
 
-         }
+    }
 
 }// end of the function
 
@@ -290,23 +290,23 @@ float printMyTranscript(struct Account account){
             for(int j=0; j<numberOfCourses; j++)
             {
 
-              if(strcmp(currentlyLoggedinStudent.studentID,listOfStudentsCourses[i].studentID)==0)
-              {
-                  if(strcmp(listOfStudentsCourses[i].courseID,listOfCourses[j].courseID)==0)
-                  {
-                    printf("%d) %s: %s: %d\n",counter,listOfStudentsCourses[i].courseID,listOfCourses[j].courseName,listOfStudentsCourses[i].mark);
+                if(strcmp(currentlyLoggedinStudent.studentID,listOfStudentsCourses[i].studentID)==0)
+                {
+                    if(strcmp(listOfStudentsCourses[i].courseID,listOfCourses[j].courseID)==0)
+                    {
+                        printf("%d) %s: %s: %d\n",counter,listOfStudentsCourses[i].courseID,listOfCourses[j].courseName,listOfStudentsCourses[i].mark);
 
-                    total += listOfStudentsCourses[i].mark;
-                      counter++;
-                  }
-              }
+                        total += listOfStudentsCourses[i].mark;
+                        counter++;
+                    }
+                }
 
             }//end of the j's for loop
 
         }//end of the i's for loop
 
     }
-     gpaData = total/(float)currentlyLoggedinStudent.numberOfCourses;
+    gpaData = total/(float)currentlyLoggedinStudent.numberOfCourses;
     return gpaData;
 }
 
@@ -351,18 +351,17 @@ float printMyGPA(struct Account account){
     return gpaData;
 }
 
-int getAllGPA(void){
+int getAllGPA(float mygpa){
     int a = 0;
     float tem = 0;
     float temIndex = 0; // to calculate the number of succeeded strump
     float array[100];
-    float myGPA = printMyGPA(currentlyLoggedinAccount);
 
     for(int i=0; i<numberOfStudents;i++)
     {
         for(int k =0; k<numberOfStudentsCourses;k++)
         {
-          a= strcmp(listOfStudents[i].studentID, listOfStudentsCourses[k].studentID);
+            a= strcmp(listOfStudents[i].studentID, listOfStudentsCourses[k].studentID);
 
             if(a==0)
             {
@@ -381,13 +380,18 @@ int getAllGPA(void){
     }//end of i's for loop
 
     int myRank = 1;
+
     for(int j=0; j<numberOfStudents;j++)
     {
-        if(myGPA<array[j])
+        //        printf("\n%f\n", array[j]);
+
+        if(mygpa<array[j])
         {
             myRank++;
         }
+
     }
+
     return myRank;
 }
 
@@ -396,7 +400,7 @@ void listAllCourses(void){
     printf("The following courses are offered in CICCC: \n\n");
     for(int i=0; i<numberOfCourses;i++){
 
-            printf("%d) %s: %s\n",i+1,listOfCourses[i].courseID,listOfCourses[i].courseName);
+        printf("%d) %s: %s\n",i+1,listOfCourses[i].courseID,listOfCourses[i].courseName);
     }
 }
 
@@ -1089,7 +1093,7 @@ void showMenu(void)
             printf("YOUR GPA IS: ");
             printf("%f",gpaData);
 
-            myRank = getAllGPA();
+            myRank = getAllGPA(gpaData);
             printf(" and therefore your rank is %d\n",myRank);
             showMenuOptions();
             break;
@@ -1127,27 +1131,27 @@ void showMenu(void)
 }
 
 void resetAccount(void){
-  currentlyLoggedinAccount.username = 0;
-  currentlyLoggedinAccount.password = 0;
+    currentlyLoggedinAccount.username = 0;
+    currentlyLoggedinAccount.password = 0;
 }
 
 void showMenuOptions(void)
 {
-      printf("\n*********************************************************\n");
-      printf(" Select from the options:");
-      printf("\n*********************************************************\n");
+    printf("\n*********************************************************\n");
+    printf(" Select from the options:");
+    printf("\n*********************************************************\n");
 
-      printf("[1] Print my enrolment certificate\n");
-      printf("[2] Print my courses\n");
-      printf("[3] Print my transcript\n");
-      printf("[4] Print my GPA\n");
-      printf("[5] Print my ranking among all students in the college\n");
-      printf("[6] List all available courses\n");
-      printf("[7] List all students\n");
-      printf("[8] Logout\n");
-      printf("[9] Exit\n");
+    printf("[1] Print my enrolment certificate\n");
+    printf("[2] Print my courses\n");
+    printf("[3] Print my transcript\n");
+    printf("[4] Print my GPA\n");
+    printf("[5] Print my ranking among all students in the college\n");
+    printf("[6] List all available courses\n");
+    printf("[7] List all students\n");
+    printf("[8] Logout\n");
+    printf("[9] Exit\n");
 
-      printf("\n==============================\n");
-      showMenu();
+    printf("\n==============================\n");
+    showMenu();
 
 }
