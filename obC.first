@@ -1,0 +1,39 @@
+//
+//  ViewController.m
+//  OOPprpject
+//
+//  Created by Sena Funakubo on 2017-02-16.
+//  Copyright © 2017 Sena Funakubo. All rights reserved.
+//
+
+#import "ViewController.h"
+#import "student.h"
+
+@interface ViewController ()
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    [self createOneStudentObject];
+}
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+-(void)createOneStudentObject
+{
+  //we want to create an object from class student
+    Student* student1 =[[Student alloc] initStudentWithStudentID:@"1234" name:@"Ali" age:32 major:@"ObjectiveC" courses:NULL admissionYear:2016 address:@"Vancouver"];
+
+    [student1 printStudentInformation];
+}
+
+@end
