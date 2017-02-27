@@ -1,0 +1,54 @@
+//
+//  main.m
+//  GpYelp
+//
+//  Created by Sena Funakubo on 2017-02-22.
+//  Copyright © 2017 Sena Funakubo. All rights reserved.
+//
+
+#import <Cocoa/Cocoa.h>
+#import "User.h"
+#import "Search.h"
+#import "FindFood.h"
+#import "Recommendation.h"
+#import "Review.h"
+#import "SeeReview.h"
+#import "Recommender.h"
+#import "Profile.h"
+#import "WritingReview.h"
+#import "AdditionalTip.h"
+#import "ShowRInfo.h"
+#import "PostComment.h"
+
+
+int main(int argc, const char * argv[]) {
+
+    //Create an account object
+
+    //Step1: Creating an account object
+    User* myUser = [[User alloc] initWithUsername:@"Nannah" password:@"1234567"];
+
+
+    //Step2: Checking whether the account is valid or not
+    BOOL isValid = [myUser isUserValid];
+
+    if(isValid==true)
+    {
+        NSLog(@"\nThe account is valid\n");
+    }
+    else
+    {
+        NSLog(@"\nThe account is not valid\n");
+    }
+
+    //create a profile object
+    //Step1:
+
+
+
+
+
+
+
+    return NSApplicationMain(argc, argv);
+}
