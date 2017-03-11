@@ -1,0 +1,112 @@
+//
+//  ViewController.m
+//  TableExample
+//
+//  Created by Sena Funakubo on 2017-03-10.
+//  Copyright © 2017 Sena Funakubo. All rights reserved.
+//
+
+#import "ViewController.h"
+
+@interface ViewController ()
+
+@property(strong,nonatomic)NSMutableArray<NSString*>* itemsForSection0;
+@property(strong,nonatomic)NSMutableArray<NSString*>* itemsForSection1;
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+
+    //prepare for seque
+    self.myTableView.delegate = self;
+    self.myTableView.dataSource = self;
+
+    self.itemsForSection0 = [@[@"Bob",@"Sam",@"Peter",@"John",@"Mary",@"Miho",@"Annri"]mutableCopy];
+    self.itemsForSection1 = [@[@"Canada",@"USA",@"Germany",@"Greece",@"Italy",@"Japan",@"China",@"Turkey"]mutableCopy];
+}
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //what information do you wanna show by the indexPath
+    if(indexPath.section==0)
+    {
+        //Step 1: Cell creation and Reuse
+          //I need to declare it in mainboard"s Identifier
+        ImageTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"ImageTableViewCellID"];
+
+        if(!cell)
+        {
+            cell = [[ImageTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ImageTableViewCellID"];
+        }
+
+        //step 2: Data Binding
+        cell.myImageView.image = [UIImage imageNamed:@"coffee"];
+//        cell.myLabel.text = @"Hello World!";
+        cell.myLabel.text = [self.itemsForSection0 objectAtIndex:indexPath.row];
+
+
+        return cell;
+    }
+    else
+    {
+        //Step 1: Cell creation and Reuse
+        TextFieldTableViewCell* cell =[tableView dequeueReusableCellWithIdentifier:@"TextFieldTableViewCellID"];
+
+        if(!cell)
+        {
+            cell = [[TextFieldTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"TextFieldTableViewCellID"];
+        }
+
+        //step 2: Data Binding
+        cell.myTextField.text = [self.itemsForSection1 objectAtIndex:indexPath.row];
+//        cell.myTextField.text = @"Bye World!";
+        return cell;
+    }
+
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.section==0)
+    {
+        return 94;
+    }
+    else
+    {
+        return 70;
+    }
+
+}
+
+//ちゃんと公式をコピペして持ってくる方がいい
+-(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 2;
+}
+
+
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+     //How many rows do you wanna add
+    if(section==0)
+    {
+        return self.itemsForSection0.count;
+    }
+    else //section==1
+    {
+        return self.itemsForSection1.count;
+    }
+}
+
+@end
