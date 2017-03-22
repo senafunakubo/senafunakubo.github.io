@@ -1,85 +1,119 @@
 //
-//  ViewController.m
-//  TableExample
+//  FirstTableViewController.m
+//  ShoppingCartApp
 //
-//  Created by Sena Funakubo on 2017-03-10.
+//  Created by Sena Funakubo on 2017-03-15.
 //  Copyright © 2017 Sena Funakubo. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "FirstTableViewController.h"
 
-@interface ViewController ()
-
-@property(strong,nonatomic)NSMutableArray<NSString*>* itemsForSection0;
-@property(strong,nonatomic)NSMutableArray<NSString*>* itemsForSection1;
+@interface FirstTableViewController ()
 
 @end
 
-@implementation ViewController
+@implementation FirstTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 
-    //prepare for seque
-    self.myTableView.delegate = self;
-    self.myTableView.dataSource = self;
+    self.firstTableView.delegate = self;
+    self.firstTableView.dataSource = self;
 
-    self.itemsForSection0 = [@[@"Bob",@"Sam",@"Peter",@"John",@"Mary",@"Miho",@"Annri"]mutableCopy];
-    self.itemsForSection1 = [@[@"Canada",@"USA",@"Germany",@"Greece",@"Italy",@"Japan",@"China",@"Turkey"]mutableCopy];
+    NSMutableArray<Products*>* productsArray = [[NSMutableArray alloc]init];
+    ShoppingCart *shoppingCart = [[ShoppingCart alloc]initWithProductsArray:productsArray];
+    self.shoppingCart = shoppingCart;
+
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //what information do you wanna show by the indexPath
-    if(indexPath.section==0)
+//what information do you wanna show by the indexPath
+    if(indexPath.row==0)
     {
         //Step 1: Cell creation and Reuse
-          //I need to declare it in mainboard"s Identifier
-        ImageTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"ImageTableViewCellID"];
+        //I need to declare it in mainboard"s Identifier
 
-        if(!cell)
-        {
-            cell = [[ImageTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ImageTableViewCellID"];
-        }
+        FirstTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"FirstTableViewCell"];
+
+         if(!cell)
+         {
+            cell = [[FirstTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"FirstTableViewCell"];
+         }
 
         //step 2: Data Binding
-        cell.myImageView.image = [UIImage imageNamed:@"coffee"];
-//        cell.myLabel.text = @"Hello World!";
-        cell.myLabel.text = [self.itemsForSection0 objectAtIndex:indexPath.row];
+        cell.myImage.image = [UIImage imageNamed:@"cloth"];
 
+        return cell;
+    }
+    else if(indexPath.row==1)
+    {
+        FirstTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"FirstTableViewCell"];
+
+         if(!cell)
+         {
+            cell = [[FirstTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"FirstTableViewCell"];
+         }
+
+        cell.myImage.image = [UIImage imageNamed:@"coffee"];
 
         return cell;
     }
     else
     {
-        //Step 1: Cell creation and Reuse
-        TextFieldTableViewCell* cell =[tableView dequeueReusableCellWithIdentifier:@"TextFieldTableViewCellID"];
+        FirstTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"FirstTableViewCell"];
 
         if(!cell)
         {
-            cell = [[TextFieldTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"TextFieldTableViewCellID"];
+            cell = [[FirstTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"FirstTableViewCell"];
         }
 
-        //step 2: Data Binding
-        cell.myTextField.text = [self.itemsForSection1 objectAtIndex:indexPath.row];
-//        cell.myTextField.text = @"Bye World!";
+        cell.myImage.image = [UIImage imageNamed:@"food"];
+
         return cell;
     }
 
 }
 
+- (void)addBuyClothItem:(Cloth*)cloth
+{
+    [self.shoppingCart addToShoppingCart:cloth];
+}
+
+- (void)addBuyDrinkItem:(Drinks*)drink
+{
+    [self.shoppingCart addToShoppingCart:drink];
+}
+
+- (void)addBuyFoodItem:(Food*)food
+{
+    [self.shoppingCart addToShoppingCart:food];
+}
+
+- (NSMutableArray<Products*>*)seeItems
+{
+    return self.shoppingCart.productsArray;
+}
+
+
+- (void)viewWillAppear:(BOOL)animated
+{
+   float amount = [self.shoppingCart calculateTotalCost];
+   self.TotalAmount.text = [@"$" stringByAppendingString:[NSString stringWithFormat:@"%.2f", amount]];
+}
+
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if(indexPath.section==0)
     {
-        return 94;
+        return 130;
     }
     else
     {
@@ -88,25 +122,77 @@
 
 }
 
-//ちゃんと公式をコピペして持ってくる方がいい
--(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 2;
+    if(indexPath.row==0) //cloth
+    {
+        UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:NULL];
+
+
+        ClothTableViewController* vc = (ClothTableViewController*)[storyboard instantiateViewControllerWithIdentifier:@"ClothTableViewControllerID"];
+
+        vc.delegate = self;
+
+        [self presentViewController:vc animated:YES completion:NULL];
+
+    }
+    else if(indexPath.row==1) //drink
+    {
+        UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:NULL];
+
+        DrinkTableViewController* vc = (DrinkTableViewController*)[storyboard instantiateViewControllerWithIdentifier:@"DrinkTableViewControllerID"];
+
+        vc.delegate = self;
+
+        [self presentViewController:vc animated:YES completion:NULL];
+    }
+    else if(indexPath.row==2)  //food
+    {
+        UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:NULL];
+
+        FoodTableViewController* vc = (FoodTableViewController*)[storyboard instantiateViewControllerWithIdentifier:@"FoodTableViewControllerID"];
+
+        vc.delegate = self;
+
+        [self presentViewController:vc animated:YES completion:NULL];
+    }
+    else //shopping list
+    {
+        UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:NULL];
+
+        ItemListTableViewController* vc = (ItemListTableViewController*)[storyboard instantiateViewControllerWithIdentifier:@"ItemListTableViewControllerID"];
+
+        vc.shoppingCart=self.shoppingCart;
+
+        //vc.delegate = self;
+
+        [self presentViewController:vc animated:YES completion:NULL];
+
+    }
+}
+
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1; //1セクションを使い回す
 }
 
 
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-     //How many rows do you wanna add
-    if(section==0)
-    {
-        return self.itemsForSection0.count;
-    }
-    else //section==1
-    {
-        return self.itemsForSection1.count;
-    }
+    return 3;
+}
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+   if([segue.identifier isEqualToString:@"showlistsegueid"])
+   {
+
+       ((ItemListTableViewController*)(segue.destinationViewController)).shoppingCart = self.shoppingCart;
+
+   }
 }
 
 @end
