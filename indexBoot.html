@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+        <head>
+            <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                        <title>Sena Funakubo | Portfolio</title>
+
+                        <!-- CSS関係 -->
+                        <link href="https://fonts.googleapis.com/css?family=Merriweather|Noto+Sans" rel="stylesheet">
+                        <link rel="stylesheet" href="portfolioBoot.css">
+                        <link href="css/font-awesome.min.css" rel="stylesheet">
+
+                        <!-- BootstrapのCSS読み込み -->
+                        <link href="css/bootstrap.min.css" rel="stylesheet">
+                        <!-- jQuery読み込み -->
+                        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+                        <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+
+                            <script>
+                            $(document).ready(function(){
+                                $("button").click(function(){
+                                    $("span").animate({left: '50px'});
+                                });
+                            });
+                            </script>
+
+
+        </head>
+
+        <body>
+            <div class="container-fluid">
+
+                <!-- <div class="text-center title"> -->
+                <div class="row">
+                   <div class="col-xs-8">
+                      <div class="title">
+                        <!-- <div class="well"> -->
+                          <span>Web developer's portfolio</span>
+                        <!-- </div> -->
+                      </div>
+                   </div>
+
+                   <div class="col-xs-4">
+                     <!-- <div class="well"> -->
+                      <img class="sena" src="sena.jpg">
+                     <!-- </div> -->
+                   </div>
+                </div>
+                        </br>
+
+                <div class="row">
+                  <div class="col-xs-4">
+                    <button class="btn btn-block btn-primary" id="target1">Love Beer! <i class="fa fa-thumbs-up"></i>
+                    </button>
+                  </div>
+                  <div class="col-xs-4"><button class="btn btn-block btn-info">Are you?</button></div>
+                  <div class="col-xs-4"><button class="btn btn-block btn-danger">No??</button></div>
+                </div>
+
+                <div class="sikaku" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+
+            </div>
+
+        </body>
+    </html>
