@@ -1,19 +1,18 @@
+@charset "UTF-8";
+
+html{
+  font-size: 62.5%;
+}
+
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+
 body{
-  background-color: white;
-  font-family: 'Noto Sans', sans-serif;
-  color: rgb(51,51,51);
-}
-
-.title{
-  font-size:20px;
-}
-
-.sena{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 280px;
-  height: 280px;
-  background-position: center center;
-  border-radius: 50%;
+  background: #151515 url('../images/bg.png') no-repeat fixed left bottom;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
