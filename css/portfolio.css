@@ -12,9 +12,9 @@ html{
 }
 
 body{
-  background: #151515 url('../images/bg.png') no-repeat fixed left bottom;
+  background: #FCF7F2 no-repeat fixed left bottom;
   background-size: cover;
-  color: #fff;
+  color: #333;
   text-align: center;
   font-size: 1.4rem;
   font-family: Raleway, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
@@ -92,7 +92,7 @@ body{
   width: 140px;
   height: 2px;
   margin: 0 30px;
-  background-color: #fff;
+  background-color: #333;
   vertical-align: middle;
 }
 
@@ -127,7 +127,7 @@ body{
  * works
  * -------------------------------- */
 .works{
-  background-color: #383634;
+  background-color: #FCF7F2;
   padding: 80px 0;
 }
 
@@ -272,50 +272,51 @@ body{
   padding: 80px 0 150px;
 }
 
-.contact-form{
-  width: 50%;
-  margin: 50px auto 0;
+.contact-list{
+  font-size: 2rem;
 }
 
-.contact-form input[type=text],
-.contact-form textarea{
+.emailLink {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 3px;
+  text-decoration: none;
+  color: #333;
+}
+
+.emailLink::after {
+  content: '';
   display: block;
+  position: absolute;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background-color: #333;
+  transition: .5s all;
+}
+
+.emailLink:hover::after {
   width: 100%;
-  margin-bottom: 10px;
-  padding: 15px;
-  outline: none;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 0;
-  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.sns-icon{
+  width: 50px;
+  height: 50px;
+  margin-bottom: 8px;
+  border: 3px solid #FCF7F2;
+  border-radius: 50%;
   color: #fff;
+  font-size: 3rem;
+  line-height: 42px;
+  background-color: #333;
+  margin-right: 5px;
 }
 
-.contact-form textarea{
-  height: 150px;
+.sns-icon:hover{
+  background-color: #f1b400;
+  border: 2px solid #f1b400;
 }
-
-.contact-form input[type=submit]{
-  display: block;
-  width: 200px;
-  margin: 40px auto 0;
-  padding: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 5;
-  background-color: transparent;
-  color: rgba(255, 255, 255, 0.6);
-  color: #fff;
-  cursor: pointer;
-}
-
-.contact-form input[type=submit]:hover{
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-.contact-form input[type=text]:focus,
-.contact-form textarea:focus{
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5) inset;
-}
-
 
 /* --------------------------------
  * footer
@@ -323,6 +324,8 @@ body{
 .footer{
   padding: 12px 0;
   font-size: 1.3rem;
+  background-color: #222A34;
+  color: #fff;
 }
 
 
@@ -368,7 +371,7 @@ body{
 
   .site-title{
     margin-top: 35px;
-    font-size: 6rem;
+    font-size: 7rem;
   }
 
 
@@ -426,7 +429,14 @@ body{
   .contact {
     padding-bottom: 80px;
   }
-  .contact-form {
-    width: 80%;
+
+  .contact-address{
+    font-size: 2rem;
+  }
+
+  .emailLink {
+    padding-bottom: 5px;
+    text-decoration: underline;
+    color: #333;
   }
 }
