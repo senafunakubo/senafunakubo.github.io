@@ -113,13 +113,33 @@ body{
  * -------------------------------- */
 .about{
   padding: 80px 30px;
-  background-color: #fff;
+  background: #fff url('../images/memphis-colorful.png') repeat fixed;
   color: #333;
+}
+
+.prof-box{
+  width: 45%;
+  height: 45%;
+  margin: 20px auto 0;
+  padding: 20px 0;
+  background-color: #fff;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  /*border: 1px solid #333;*/
+}
+
+.mypic{
+  width: 200px;
+  height: 200px;
+  margin: 10px 0;
+  border: 0px;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 192px;
 }
 
 .about-text{
   margin: 30px 0;
-  line-height: 2.5;
+  line-height: 2.2;
 }
 
 
@@ -209,8 +229,10 @@ body{
 }
 
 .button-ghost{
-  border: 1px solid #fff;
+  color: #333;
+  border: 1px solid;
   background-color: rgba(255, 255, 255, 0.15);
+  margin-top: 50px;
 }
 
 .work-box:nth-child(odd) .work-image{
@@ -269,7 +291,7 @@ body{
  * contact
  * -------------------------------- */
 .contact{
-  padding: 80px 0 150px;
+  padding: 80px 0 80px;
 }
 
 .contact-list{
@@ -282,6 +304,7 @@ body{
   padding-bottom: 3px;
   text-decoration: none;
   color: #333;
+  margin-bottom: 10px;
 }
 
 .emailLink::after {
@@ -310,12 +333,12 @@ body{
   font-size: 3rem;
   line-height: 42px;
   background-color: #333;
-  margin-right: 5px;
+  margin: 0 5px 30px;
 }
 
 .sns-icon:hover{
   background-color: #f1b400;
-  border: 2px solid #f1b400;
+  border: 3px solid #f1b400;
 }
 
 /* --------------------------------
@@ -376,10 +399,18 @@ body{
 
 
   /* --- about --- */
-  .about-text{
-    line-height: 1.8;
+
+  .prof-box{
+    width: 80%;
+    height: 80%;
+    border: 0px;
   }
 
+  .mypic{
+    width: 150px;
+    height: 150px;
+    line-height: 142px;
+  }
 
   /* --- works --- */
   .works-wrapper,
@@ -438,6 +469,10 @@ body{
     padding-bottom: 5px;
     text-decoration: underline;
     color: #333;
+  }
+
+  .emailLink::after {
+    display: none;
   }
 
   .emailLink:hover::after {
