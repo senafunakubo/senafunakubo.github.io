@@ -294,7 +294,16 @@ body{
   /*font-size: 1.5rem;*/
 }
 
-/* common setting */
+/* popup */
+
+.close_btn {
+    display: block;
+    float: right;
+    margin: 20px 40px 0 0;
+    font-size: 4em;
+    color: #333;
+}
+
 .popup {
     display: none;
     position: fixed;
@@ -302,12 +311,19 @@ body{
     left: 0;
     height: 100%;
     background-color: #fff;
-    overflow: hidden;
     z-index: 101;
 }
+
 .popup_inner {
-    padding: 90px;
+    padding: 80px;
 }
+
+.popup-skill{
+  margin: 0 20px;
+  line-height: 2;
+}
+
+
 #overlay {
     display: none;
     position: fixed;
@@ -319,10 +335,8 @@ body{
     z-index: 100;
 }
 
-/* individual setting */
 #popup1 {
     width: 100%;
-    /*height: fit-content;*/
 }
 
 
@@ -496,6 +510,25 @@ body{
 
   .skill-text{
     margin: 0;
+  }
+
+  .popup_inner {
+    padding: 0px;
+  }
+
+  .level{
+    display: none;
+  }
+
+  .popup-skillbox{
+    margin: 10px auto;
+  }
+
+  .close_btn {
+      display: block;
+      float: right;
+      font-size: 2em;
+      color: #333;
   }
 
 

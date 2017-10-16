@@ -2,10 +2,12 @@
 $(function(){
 
   $('.button').click(function () {
-    $('html, body').css({
-       overflow: 'hidden',
-       height: '100%'
-    });
+    if(!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
+        $('html, body').css({
+          overflow: 'hidden',
+          height: '100%'
+        });
+    }
   });
 
   var position = $(".skills").offset().top;
@@ -18,14 +20,23 @@ $(function(){
             $popup.css({}).show();
             $('#overlay').show();
 
+            if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
+              $('html, body, #popup1').css({
+                height: 'auto'
+              });
+            }
+
             return false;
         })
         .on('click', '.close_btn, #overlay', function(){
             $('.popup, #overlay').hide();
-            $('html, body').css({
-               overflow: 'auto',
-               height: 'auto'
-            });
+            if(!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
+                $('html, body').css({
+                  overflow: 'auto',
+                  height: 'auto'
+                });
+            }
+
             $(window).scrollTop(position);
 
             return false;
