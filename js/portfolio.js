@@ -1,3 +1,3 @@
 <script>
-  AOS.init();
+    AOS.init();
 </script>
