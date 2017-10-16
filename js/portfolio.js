@@ -1,3 +1,7 @@
-<script>
-    AOS.init();
-  </script>
+$(function(){
+
+  $('.button').mouseover(function () {
+    $(this).fadeOut("slow");
+  });
+
+});
