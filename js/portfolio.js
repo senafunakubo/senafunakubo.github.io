@@ -1,14 +1,14 @@
 (function($){
 $(function(){
 
-  $('.button').click(function () {
-    if(!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
-        $('html, body').css({
-          overflow: 'hidden',
-          height: '100%'
-        });
-    }
-  });
+  // $('.button').click(function () {
+  //   if(!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
+  //       $('html, body').css({
+  //         overflow: 'hidden',
+  //         height: '100%'
+  //       });
+  //   }
+  // });
 
   var position = $(".skills").offset().top;
 
