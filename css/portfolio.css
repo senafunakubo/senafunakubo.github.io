@@ -24,6 +24,7 @@ body{
 /* --------------------------------
  * parts
  * -------------------------------- */
+
 .heading{
   position: relative;
   display: inline-block;
@@ -171,7 +172,7 @@ body{
  * -------------------------------- */
 .works{
   background-color: #FCF7F2;
-  padding: 80px 0;
+  padding: 80px 0 0 0;
 }
 
 .works-wrapper{
@@ -193,6 +194,13 @@ body{
   width: 100%;
   margin: 0 0 60%;
 }
+
+.ice{
+  width: auto;
+  max-height: 393px;
+  margin: 0 auto;
+}
+
 
 /*.work-box::after{
   content: '';
@@ -223,6 +231,10 @@ body{
   background-image: url('../images/sky.jpg');
 }*/
 
+.work-box.lake{
+  vertical-align: top;
+}
+
 .work-description{
   position: absolute;
   top: 50%;
@@ -245,6 +257,11 @@ body{
   vertical-align: middle;
   font-size: 1.2rem;
   line-height: 2;
+}
+
+.work-title{
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .work-text .button{
@@ -309,9 +326,9 @@ body{
 }
 
 .skill-text{
-  margin: 0 40px;
-  line-height: 2;
-  /*font-size: 1.5rem;*/
+  margin: auto 20px;
+  line-height: 1.8;
+  text-align: start;
 }
 
 /* popup */
@@ -364,7 +381,7 @@ body{
  * contact
  * -------------------------------- */
 .contact{
-  padding: 80px 0 80px;
+  padding: 80px 0 40px;
 }
 
 .contact-list{
@@ -433,6 +450,17 @@ body{
 @media (max-width: 1024px) {
    body {
      background-image: none;
+   }
+
+   .work-box.lake{
+     vertical-align: top;
+   }
+
+   .ice{
+     width: auto;
+     max-height: 308px;
+     max-width: 393px;
+     margin: 0 auto;
    }
  }
 
@@ -517,6 +545,17 @@ body{
 
   .work-description-inner{
     padding: 35px 20px;
+  }
+
+  .work-box.lake{
+    vertical-align: top;
+  }
+
+  .ice{
+    width: auto;
+    max-height: 393px;
+    max-width: 393px;
+    margin: 0 auto;
   }
 
 
