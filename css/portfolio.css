@@ -201,6 +201,9 @@ body{
   margin: 0 auto;
 }
 
+.more{
+  text-align: center;
+}
 
 /*.work-box::after{
   content: '';
@@ -555,7 +558,11 @@ body{
     width: auto;
     max-height: 393px;
     max-width: 393px;
-    margin: 0 auto;
+    margin: 30px auto;
+  }
+
+  .more{
+    text-align: center;
   }
 
 
