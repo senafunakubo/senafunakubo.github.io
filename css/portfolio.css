@@ -53,7 +53,7 @@ body{
   width: 200px;
   padding: 20px;
   border-radius: 4px;
-  background-color: #afa58d;
+  background-color: #333;
   color: #fff;
   text-decoration: none;
   letter-spacing: 1px;
@@ -62,10 +62,11 @@ body{
 
 .button:hover{
   opacity: 0.9;
+  letter-spacing: 2.5px;
 }
 
 .button-showy{
-  background-color: #f1b400;
+  background-color: #FF9490;
 }
 
 .buttons .button{
