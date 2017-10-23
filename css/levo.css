@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+/* --------------------------------
+ * base
+ * -------------------------------- */
+ html{
+   font-size: 62.5%;
+ }
+
+ *,*::before,*::after{
+   box-sizing: border-box;
+ }
+
+ body{
+   background: #151515 url('../images/bg2.jpg') no-repeat fixed left bottom;
+   background-size: cover;
+   color: #fff;
+   text-align: center;
+   font-size: 1.4rem;
+   font-family: Raleway, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+ }
+
+
+ /* --------------------------------
+  * header
+  * -------------------------------- */
+
+  .header{
+    padding: 30px 30px 90px;
+    background-color: rgba(255, 255, 255, 0.10);
+  }
+
+  #site-logo{
+    /*float: left;*/
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+  }
+
+  img#site-logo{
+    vertical-align: middle;
+  }
+
+  .nav_links{
+    margin: 0;
+  }
+
+  .nav_links a{
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .nav-menu{
+    margin: 0 5px;
+    padding: 10px 5px;
+  }
+
+  .nav-menu:hover{
+    background-color: #333;
+    border-radius: 10px;
+  }
+
+  .site-main{
+    margin: 100px 0 60px;
+    font-size: 3.8rem;
+    letter-spacing: 2px;
+    line-height: 1.4;
+  }
+
+  .site-description{
+    font-size: 1.8rem;
+  }
+
+
+  /* --------------------------------
+   * services
+   * -------------------------------- */
+
+   .service{
+     padding: 60px 30px 100px;
+     background-color: #fff;
+     color: #333;
+     font-size: 1.8rem;
+   }
+
+   .service-description{
+     /*text-align: start;*/
+   }
+
+   .service-photo{
+     width: 400px;
+     height: 400px;
+     margin-top: 20px;
+   }
+
+   img.service-photo{
+     vertical-align: middle;
+   }
