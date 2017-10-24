@@ -84,7 +84,6 @@
    }
 
    .catch-cp{
-     color: #B48B5B;
      margin-bottom: 30px;
    }
 
@@ -105,4 +104,13 @@
 
    img.service-photo{
      vertical-align: middle;
+   }
+
+   .main-description{
+     font-family: 'Vollkorn', serif;
+   }
+
+   span.sub-description{
+     font-size: 1.6rem;
+     font-family: Raleway, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
    }
