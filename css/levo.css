@@ -77,20 +77,30 @@
    * -------------------------------- */
 
    .service{
-     padding: 60px 30px 100px;
+     padding: 80px 60px 100px 60px;
      background-color: #fff;
      color: #333;
      font-size: 1.8rem;
    }
 
+   .catch-cp{
+     color: #B48B5B;
+     margin-bottom: 30px;
+   }
+
    .service-description{
-     /*text-align: start;*/
+     text-align: start;
+     display: inline-block;
+     vertical-align: middle;
+     letter-spacing: 1.5px;
+     line-height: 1.5;
    }
 
    .service-photo{
      width: 400px;
-     height: 400px;
+     height: 250px;
      margin-top: 20px;
+     margin-right: 40px;
    }
 
    img.service-photo{
