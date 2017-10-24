@@ -114,3 +114,15 @@
      font-size: 1.6rem;
      font-family: Raleway, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
    }
+
+   .learnmore{
+     color: #028090;
+     text-decoration: none;
+     display: inline-block;
+     transition: .3s;
+   }
+
+   .learnmore:hover{
+    letter-spacing: 2px;
+    color: #AE7F51;
+   }
