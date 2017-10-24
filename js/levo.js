@@ -1,5 +1,5 @@
 $(function() {
-    var triggerNode = $(".service-description");
+    var triggerNode = $(".learnmore");
 
     $(window).scroll(function(){
         var triggerNodePosition = $(triggerNode).offset().top - $(window).height();
