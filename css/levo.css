@@ -126,3 +126,48 @@
     letter-spacing: 2px;
     color: #AE7F51;
    }
+
+
+   /* --------------------------------
+    * services
+    * -------------------------------- */
+
+   .client{
+     padding: 80px 60px 100px 60px;
+     background-color: #333;
+     color: #fff;
+     font-size: 1.8rem;
+   }
+
+   .client-wrapper{
+     display: table;
+     width: 80%;
+     margin: 50px auto 0;
+     table-layout: fixed;
+   }
+
+   .client-box{
+     display: table-cell;
+   }
+
+   .client-center-pic{
+     position: relative;
+   }
+
+   .client-center-pic .fa {/*classがfaのアイコンに対して*/
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     -ms-transform: translate(-50%,-50%);
+     -webkit-transform: translate(-50%,-50%);
+     transform: translate(-50%,-50%);
+     margin:0;/*余計な隙間を除く*/
+     padding:0;/*余計な隙間を除く*/
+     color: pink;/*アイコン色*/
+     font-size: 60px;/*サイズ*/
+  }
+
+   .client-pic{
+     width: 200px;
+     height: 200px;
+   }
