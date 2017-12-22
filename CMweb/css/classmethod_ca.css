@@ -170,27 +170,24 @@ img#top_image {
 
 img.casestudy_img {
   margin-bottom: 20px;
-  width: 400px;
+  width: 100%;
   margin: 0 auto;
 }
 
 .content {
   position: relative;
   margin: 20px auto;
-  width: 400px;
-  height: 280.5px;
+  width: 80%;
   overflow: hidden;
 }
 
 .caption {
   position: absolute;
-  left: 0;
-  top: 209px;
-  width: 400px;
-  /*background-color: rgba(244, 91, 105, 0.9);*/
+  top: 72%;
   background-color: rgba(15, 139, 141, 0.8);
   color: #fff;
   padding: 10px;
+  margin: 0;
 }
 
 .casestudy_wrapper {
@@ -215,7 +212,7 @@ img.casestudy_img {
   margin: 10px 0 0 0;
 }
 
-.button_learn:hover{
+.button_learn:hover {
   background-color: #456990;
   color: #fff;
   transition: all 0.5s ease;
@@ -276,27 +273,26 @@ img.casestudy_img {
 * -------------------------------- */
 
 #your_solution {
-  height: 640px;
-  padding: 80px 0;
+  height: 80%;
+  margin: 80px 0;
   background-color: #fff;
 }
 
 .solution_wrapper {
   margin: 0 auto;
   width: 80%;
-  /*box-shadow: -4px 7px 15px 1px rgba(0, 0, 0, .2);*/
-  box-shadow: -9px 10px 39px -1px rgba(15,9,1,0.66);
+  box-shadow: -9px 10px 39px -1px rgba(15, 9, 1, 0.66);
 }
 
 .pic_meeting {
   width: 50%;
-  height: 460px;
   float: left;
   -webkit-filter: sepia(50%);
   filter: sepia(50%)
 }
 
 .solution_box {
+  position: relative;
   background-color: #456990;
   width: 50%;
   float: right;
@@ -304,32 +300,37 @@ img.casestudy_img {
 }
 
 .your_solution_catch_wrapper {
-  width: 75%;
-  margin: 0 auto;
+ position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
 }
 
 .your_solution_catch {
-  font-size: 4.2rem;
+  font-size: 4.4rem;
   font-family: helvetica, sans-serif;
   font-weight: bold;
-  display: inline-block;
-  margin-top: 4rem;
+  margin: 0;
+  padding: 0;
   color: #F7F4DA;
 }
 
 .your_solution_description {
   font-family: 'Libre Baskerville', serif;
   letter-spacing: 1.5px;
-  font-size: 1.4rem;
-  margin: 25px 0;
+  font-size: 1.3rem;
   line-height: 1.7;
+  margin: 5% 0;
   color: #fff;
 }
 
 .solution_button_deco {
   color: #fff;
   border: solid 1px #fff;
-  /*margin-top: 10px;*/
+  font-size: 1rem;
 }
 
 /* --------------------------------
@@ -366,7 +367,6 @@ img.casestudy_img {
   font-size: 4.5rem;
   font-weight: bold;
 }
-
 
 /* --------------------------------
 * footer

@@ -50,11 +50,11 @@ $(function() {
 $(function() {
   $('.content').hover(function() {
     $('.caption', this).animate({
-      top: "100px"
+      top: "5%"
     }, 300);
   }, function() {
     $('.caption', this).animate({
-      top: "209px"
+      top: "10%"
     }, 300);
   });
 });
