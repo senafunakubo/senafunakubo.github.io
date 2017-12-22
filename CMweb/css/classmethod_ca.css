@@ -190,7 +190,7 @@ img.casestudy_img {
   margin: 0;
 }
 
-#caption_sora_description{
+p#caption_sora_description{
   position: absolute;
   top: 4%;
   right: 4%;
@@ -200,7 +200,7 @@ img.casestudy_img {
   font-size: 1.3rem;
 }
 
-#caption_sora{
+p#caption_sora{
   position: absolute;
   top: 0;
   right: 0;
@@ -404,3 +404,7 @@ img.casestudy_img {
   margin: 0 15px;
   font-size: 1.2rem;
 }
+
+/* --------------------------------
+ * smart phone
+ * -------------------------------- */
