@@ -130,7 +130,7 @@ img#top_image {
   color: #fff;
   font-size: 1.4rem;
   line-height: 2.5rem;
-  letter-spacing: 1.4px;
+  letter-spacing: 1.2px;
 }
 
 .arrow_place {
@@ -284,7 +284,8 @@ img.casestudy_img {
 .solution_wrapper {
   margin: 0 auto;
   width: 80%;
-  box-shadow: -4px 7px 15px 1px rgba(0, 0, 0, .2);
+  /*box-shadow: -4px 7px 15px 1px rgba(0, 0, 0, .2);*/
+  box-shadow: -9px 10px 39px -1px rgba(15,9,1,0.66);
 }
 
 .pic_meeting {
