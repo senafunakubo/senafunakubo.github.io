@@ -1,0 +1,387 @@
+@charset "UTF-8";
+/* --------------------------------
+ * base
+ * -------------------------------- */
+
+html {
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: white no-repeat fixed left bottom;
+  background-size: cover;
+  color: #333;
+  font-size: 1.6rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.main_phrase {
+  color: #456990;
+  font-size: 3rem;
+  font-weight: 100;
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.button {
+  width: 140px;
+  display: inline-block;
+  border: solid 1px #333;
+  text-align: center;
+  float: right;
+  padding: 10px;
+}
+
+.button_deco {
+  color: #333;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.button:hover {
+  color: #456990;
+  background-color: #fff;
+}
+
+/* --------------------------------
+ * header
+ * -------------------------------- */
+
+#header {
+  color: white;
+  background-color: #333;
+}
+
+img#cm_logo {
+  vertical-align: middle;
+  margin-right: 60px;
+  margin: 10px 100px 5px 80px;
+}
+
+p.head-navigation {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.4rem;
+}
+
+.nav_margin {
+  margin: 20px 40px 10px 100px;
+}
+
+.nav_deco {
+  font-family: 'Libre Baskerville', serif;
+  color: white;
+  text-decoration: none;
+}
+
+.nav_deco:hover {
+  color: #F45B69;
+  opacity: 0.95;
+}
+
+.navi_group {
+  float: right;
+  background-color: #333;
+  margin-top: 10px;
+}
+
+/* --------------------------------
+ * Top Section
+ * -------------------------------- */
+
+#top_section {
+  background-color: #F45B69;
+  opacity: 0.95;
+}
+
+.catchphrase_deco {
+  color: #F7F4DA;
+  display: inline-block;
+}
+
+.catchphrase {
+  font-size: 5.2rem;
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+img#top_image {
+  float: right;
+}
+
+.catchphrase-box {
+  background-color: #F45B69;
+  position: relative;
+}
+
+.catchphrase-box-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 30px;
+}
+
+.sub-catchphrase {
+  font-family: 'Libre Baskerville', serif;
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  letter-spacing: 1.4px;
+}
+
+.arrow_place {
+  text-align: center;
+}
+
+.arrow {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+.arrow:hover {
+  color: #333;
+}
+
+.fa-chevron-down {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke: 1.8px #F45B69;
+}
+
+/* --------------------------------
+* What we do
+* -------------------------------- */
+
+#whatwedo {
+  height: 700px;
+  text-align: center;
+  background-color: #fff;
+  padding: 30px 0;
+}
+
+.sub_copy_cms {
+  font-size: 1.6rem;
+  margin: 0 0 60px 0;
+}
+
+img.casestudy_img {
+  margin-bottom: 20px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.content {
+  position: relative;
+  margin: 20px auto;
+  width: 400px;
+  height: 280.5px;
+  overflow: hidden;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 209px;
+  width: 400px;
+  /*background-color: rgba(244, 91, 105, 0.9);*/
+  background-color: rgba(15, 139, 141, 0.8);
+  color: #fff;
+  padding: 10px;
+}
+
+.casestudy_wrapper {
+  display: table;
+  width: 90%;
+  height: 266.5px;
+  margin: 20px auto;
+  table-layout: fixed;
+}
+
+.casestudy_wrapper_box {
+  display: table-cell;
+}
+
+.button_learn {
+  float: none;
+  color: #456990;
+  background-color: #fff;
+  border: solid 1px #456990;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  margin: 10px 0 0 0;
+}
+
+.button_learn:hover{
+  background-color: #456990;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+/* --------------------------------
+* 3 points
+* -------------------------------- */
+
+#three-points {
+  height: 540px;
+  text-align: center;
+  background-color: #E9EEF0;
+  padding: 30px 0;
+}
+
+.advantage {
+  font-size: 3rem;
+}
+
+.points-wrapper {
+  display: table;
+  width: 80%;
+  margin: 50px auto;
+  table-layout: fixed;
+}
+
+.points-box {
+  display: table-cell;
+}
+
+.points-icon-circle {
+  width: 200px;
+  height: 150px;
+  margin: 0 auto;
+  color: #0F8B8D;
+  font-size: 10rem;
+  border-radius: 50%;
+}
+
+.points-title {
+  color: #456990;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+.points-text {
+  font-size: 1.5rem;
+  margin: auto 25px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* --------------------------------
+* your_solution
+* -------------------------------- */
+
+#your_solution {
+  height: 640px;
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.solution_wrapper {
+  margin: 0 auto;
+  width: 80%;
+  box-shadow: -4px 7px 15px 1px rgba(0, 0, 0, .2);
+}
+
+.pic_meeting {
+  width: 50%;
+  height: 460px;
+  float: left;
+  -webkit-filter: sepia(50%);
+  filter: sepia(50%)
+}
+
+.solution_box {
+  background-color: #456990;
+  width: 50%;
+  float: right;
+  opacity: 0.9;
+}
+
+.your_solution_catch_wrapper {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.your_solution_catch {
+  font-size: 4.2rem;
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 4rem;
+  color: #F7F4DA;
+}
+
+.your_solution_description {
+  font-family: 'Libre Baskerville', serif;
+  letter-spacing: 1.5px;
+  font-size: 1.4rem;
+  margin: 25px 0;
+  line-height: 1.7;
+  color: #fff;
+}
+
+.solution_button_deco {
+  color: #fff;
+  border: solid 1px #fff;
+  /*margin-top: 10px;*/
+}
+
+/* --------------------------------
+* contact
+* -------------------------------- */
+
+#contact {
+  height: 300px;
+  background-color: #E9EEF0;
+}
+
+.contact_wrapper {
+  width: 80%;
+  height: 250px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.button_contact {
+  float: none;
+  color: #fff;
+  background-color: #F45B69;
+  border: none;
+  border-radius: 5px;
+}
+
+.button_contact:hover {
+  background-color: #456990;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.contact_catchphrase {
+  font-size: 4.5rem;
+  font-weight: bold;
+}
+
+
+/* --------------------------------
+* footer
+* -------------------------------- */
+
+#footer {
+  height: 120px;
+  background-color: #333;
+}
+
+.cm_logo_footer {
+  margin: 30px 0 5px 15px;
+}
+
+.copywrite {
+  color: #888;
+  margin: 0 15px;
+  font-size: 1.2rem;
+}
