@@ -2,10 +2,14 @@ $(function() {
   h = $(window).innerHeight();
   w = $(window).innerWidth();
 
-  topImgWidth = w - 342;
-  $("#top_image").css("width", topImgWidth + "px");
+  // topImgWidth = w - 342;
+  // $("#top_image").css("width", topImgWidth + "px");
 
   if (w>=1025){
+    topImgWidth = w - 342;
+    $("#top_image").css("width", topImgWidth + "px");
+
+    // 77(px) = header's height
     box_height = h - 77;
     $(".catchphrase-box,.catchphrase-box-child,#top_section,#top_image").
     css("height", box_height + "px");
@@ -13,6 +17,17 @@ $(function() {
   else if (w<=1024 && w>=768){
     $(".catchphrase-box,.catchphrase-box-child,#top_section,#top_image").
     css("height", 600 + "px");
+  }
+  else if (w<768) {
+    box_height_mb = h - 60;
+    if (h<=640) {
+      $(".mobile,.catchphrase-box,.catchphrase-box-child,#top_section").
+      css("height", box_height_mb + "px");
+    }
+    else {
+      $(".mobile,.catchphrase-box,.catchphrase-box-child,#top_section").
+      css("height", 550 + "px");
+    }
   }
 
 
@@ -23,6 +38,7 @@ $(function() {
 
 // solution
   height = $(".pic_meeting").height();
+  height = height + 50;
   $(".solution_box,.solution_wrapper").height(height);
 
 });
