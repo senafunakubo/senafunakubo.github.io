@@ -2,21 +2,39 @@ $(function() {
   h = $(window).innerHeight();
   w = $(window).innerWidth();
 
-  // topImgWidth = w - 342;
-  // $("#top_image").css("width", topImgWidth + "px");
+  // 64(px) = header's height
+  box_height = h - 64;
+
+  $(function() {
+    var $allTopCatch = $('.top_catch');
+    var $wordList = $('.top_catch').html().split("");
+    $('.top_catch').html("");
+    $.each($wordList, function(idx, elem) {
+        var catchShow = $("<span/>").text(elem).css({ opacity: 0 });
+        catchShow.appendTo($allTopCatch);
+        catchShow.delay(idx * 30);
+        catchShow.animate({ opacity: 1 }, 1000);
+    });
+});
 
   if (w>=1025){
     topImgWidth = w - 342;
     $("#top_image").css("width", topImgWidth + "px");
 
-    // 77(px) = header's height
-    box_height = h - 77;
     $(".catchphrase-box,.catchphrase-box-child,#top_section,#top_image").
     css("height", box_height + "px");
+
+    // arrow first place
+    $(".arrow_place").
+    css("top", box_height - 80 + "px");
   }
   else if (w<=1024 && w>=768){
     $(".catchphrase-box,.catchphrase-box-child,#top_section,#top_image").
     css("height", 600 + "px");
+
+    // arrow first place
+    $(".arrow_place").
+    css("top", 550 + "px");
   }
   else if (w<768) {
     box_height_mb = h - 60;
@@ -24,26 +42,30 @@ $(function() {
       $(".mobile,.catchphrase-box,.catchphrase-box-child,#top_section").
       css("height", box_height_mb + "px");
     }
+    else if(h>=780){
+      $(".mobile,.catchphrase-box,.catchphrase-box-child,#top_section").
+      css("height", 650 + "px");
+    }
     else {
       $(".mobile,.catchphrase-box,.catchphrase-box-child,#top_section").
-      css("height", 550 + "px");
+      css("height", 70 + "%");
     }
   }
 
 
-// 3 points
+// 3 points - make it disappear
   $('#your_solution').append(
     '<style type="text/css">.fa-amazon,.fa-globe,.fa-thumbs-o-up {display:none;}'
   );
 
-// solution
+// your solution - height of solution
   height = $(".pic_meeting").height();
   height = height + 50;
   $(".solution_box,.solution_wrapper").height(height);
 
 });
 
-
+// 3 points - fadein
 $(function() {
   var triggerNode = $(".points-text");
 
@@ -56,7 +78,7 @@ $(function() {
 
 });
 
-
+// what we do - animation of captions
 $(function() {
   $('.content').hover(function() {
     $('.caption', this).animate({
@@ -64,26 +86,27 @@ $(function() {
     }, 300);
   }, function() {
     $('.caption', this).animate({
-      top: "10%"
+      top: "15%"
     }, 300);
   });
 });
 
-
+//top section - animation of an arrow
 $(function() {
   setTimeout('arrowMove()');
 });
 
 function arrowMove() {
   $('.arrow').animate({
-    marginTop: '-=10px'
-  }, 900).animate({
-    marginTop: '+=10px'
-  }, 900);
-  setTimeout('arrowMove()', 1600);
+    marginTop: '-=20px'
+  }, 850).animate({
+    marginTop: '+=20px'
+  }, 850);
+  setTimeout('arrowMove()', 1000);
 }
 
 
+//contact - animation of a sub description
 $(function() {
   var triggerNode = $("#contact");
 
