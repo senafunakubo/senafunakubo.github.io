@@ -527,8 +527,8 @@ p#caption_sora {
     height: 60px;
   }
   img#cm_logo {
-    margin: 0px 0px 0px 20px;
     width: 70%;
+    margin: 6px 6px;
   }
   .navi_group {
     display: none;
@@ -557,8 +557,13 @@ p#caption_sora {
     background-color: transparent;
   }
   .catchphrase {
-    font-size: 4.2rem;
+    font-size: 3.8rem;
   }
+  .sub-catchphrase {
+    font-size: 1.1rem;
+    line-height: 2.2rem;
+    letter-spacing: 1px;
+}
   /* --- solution --- */
   .your_solution_catch {
     font-size: 2.8rem;
