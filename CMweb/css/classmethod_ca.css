@@ -12,8 +12,7 @@ html {
 }
 
 body {
-  background: white no-repeat fixed left bottom;
-  background-size: cover;
+  background: white;
   color: #333;
   font-size: 1.6rem;
   font-family: 'Open Sans', sans-serif;
@@ -58,8 +57,7 @@ body {
 
 img#cm_logo {
   vertical-align: middle;
-  margin-right: 60px;
-  margin: 10px 100px 5px 80px;
+  margin: 10px 30px 5px 30px;
 }
 
 p.head-navigation {
@@ -114,6 +112,14 @@ img#top_image {
   max-width: 100%;
 }
 
+img.pc {
+  display: block !important;
+}
+
+img.mobile {
+  display: none !important;
+}
+
 .catchphrase-box {
   background-color: #F45B69;
   position: relative;
@@ -159,7 +165,7 @@ img#top_image {
 * -------------------------------- */
 
 #whatwedo {
-  height: 700px;
+  height: 600px;
   text-align: center;
   background-color: #fff;
   padding: 30px 0;
@@ -185,34 +191,38 @@ img.casestudy_img {
 
 .caption {
   position: absolute;
-  top: 72%;
+  top: 80%;
   background-color: rgba(15, 139, 141, 0.8);
   color: #fff;
-  padding: 10px;
+  padding: 5px;
   margin: 0;
 }
 
-p#caption_sora_description{
+p#caption_sora_description {
   position: absolute;
-  top: 4%;
-  right: 4%;
+  top: 5%;
+  right: 6%;
   margin: 0;
   color: #00D0DB;
   opacity: 0.4;
   font-size: 1.3rem;
 }
 
-p#caption_sora{
+p#caption_sora {
   position: absolute;
   top: 0;
   right: 0;
   margin: 0;
 }
 
+#sora_pic {
+  width: 90%;
+}
+
 .casestudy_wrapper {
   display: table;
   width: 95%;
-  height: 266.5px;
+  /* height: 266.5px; */
   margin: 20px auto;
   table-layout: fixed;
 }
@@ -320,30 +330,30 @@ p#caption_sora{
 }
 
 .your_solution_catch_wrapper {
- position: absolute;
+  position: absolute;
   width: 80%;
   top: 50%;
   left: 50%;
-  -ms-transform: translate(-50%,-50%);
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .your_solution_catch {
-  font-size: 4.4rem;
+  font-size: 3.5rem;
   font-family: helvetica, sans-serif;
   font-weight: bold;
-  margin: 0;
   padding: 0;
   color: #F7F4DA;
+  margin: 4% 0;
 }
 
 .your_solution_description {
   font-family: 'Libre Baskerville', serif;
   letter-spacing: 1.5px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   line-height: 1.7;
-  margin: 5% 0;
+  margin: 4% 0;
   color: #fff;
 }
 
@@ -411,11 +421,141 @@ p#caption_sora{
  * tablet
  * -------------------------------- */
 
- @media (max-width: 1020px) and (min-width: 768px){
-
- }
-
+@media (max-width: 1024px) and (min-width: 768px) {
+  body {
+    font-size: 1.3rem;
+  }
+  .main_phrase {
+    font-size: 2.5rem;
+  }
+  .button {
+    width: 110px;
+    padding: 5px;
+    font-size: 1rem;
+  }
+  /* --- header --- */
+  .nav_margin {
+    margin: 20px 30px 10px 0;
+  }
+  /* --- top section --- */
+  img.pc {
+    display: block !important;
+  }
+  img.mobile {
+    display: none !important;
+  }
+  .catchphrase-box {
+    width: 315px;
+  }
+  .catchphrase {
+    font-size: 4rem;
+  }
+  .sub-catchphrase {
+    font-size: 1.2rem;
+  }
+  /* --- whatwedo --- */
+  #whatwedo {
+    height: 500px;
+  }
+  .caption {
+    font-size: 1rem;
+    padding: 5px;
+    top: 0;
+  }
+  p#caption_sora_description {
+    top: 4%;
+    right: 4%;
+    margin: 0;
+    font-size: 0.8rem;
+  }
+  p#caption_sora {
+    top: 0px;
+    right: -30px;
+  }
+  /* --- 3 points --- */
+  #three-points {
+    height: 500px;
+  }
+  .points-wrapper {
+    width: 90%;
+    margin: 45px auto;
+  }
+  .points-text {
+    font-size: 1.3rem;
+  }
+  .points-title {
+    font-size: 1.6rem;
+  }
+  .sub_copy_cms {
+    font-size: 1.3rem;
+    margin: 0 0 45px 0;
+  }
+  /* --- solution --- */
+  .solution_wrapper {
+    width: 90%;
+  }
+  .your_solution_catch {
+    font-size: 3rem;
+  }
+  .your_solution_description {
+    font-size: 0.4rem;
+  }
+  /* --- contact ---*/
+  #contact {
+    height: 230px;
+  }
+  .contact_catchphrase {
+    margin: 30px 0 15px 0px;
+  }
+}
 
 /* --------------------------------
  * smart phone
  * -------------------------------- */
+
+@media (max-width: 767px) {
+  /* --- header --- */
+  #header {
+    height: 60px;
+  }
+  img#cm_logo {
+    margin: 0px 0px 0px 20px;
+    width: 70%;
+  }
+  .navi_group {
+    display: none;
+  }
+  /* --- top section --- */
+  #top_section {
+    background-color: transparent;
+  }
+  img#top_image {
+    float: right;
+    width: 100%;
+  }
+  img.pc {
+    display: none !important;
+  }
+  img.mobile {
+    display: block !important;
+    -webkit-filter: brightness(0.75);
+  }
+  .fa-chevron-down {
+  -webkit-text-stroke: 0px #fff;
+  }
+  .catchphrase-box {
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+  }
+  .catchphrase {
+    font-size: 4.2rem;
+  }
+  /* --- solution --- */
+  .your_solution_catch {
+    font-size: 2.8rem;
+  }
+  .your_solution_description {
+    font-size: 0.4rem;
+  }
+}
