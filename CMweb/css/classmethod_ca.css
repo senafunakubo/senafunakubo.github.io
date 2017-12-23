@@ -111,11 +111,13 @@ p.head-navigation {
 
 img#top_image {
   float: right;
+  max-width: 100%;
 }
 
 .catchphrase-box {
   background-color: #F45B69;
   position: relative;
+  width: 400px;
 }
 
 .catchphrase-box-child {
