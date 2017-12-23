@@ -5,10 +5,15 @@ $(function() {
   topImgWidth = w - 342;
   $("#top_image").css("width", topImgWidth + "px");
 
-  box_height = h - 77;
-
-  $(".catchphrase-box,.catchphrase-box-child,#top_section,#top_image").
-  css("height", box_height + "px");
+  if (w>=1025){
+    box_height = h - 77;
+    $(".catchphrase-box,.catchphrase-box-child,#top_section,#top_image").
+    css("height", box_height + "px");
+  }
+  else if (w<=1024 && w>=768){
+    $(".catchphrase-box,.catchphrase-box-child,#top_section,#top_image").
+    css("height", 600 + "px");
+  }
 
 
 // 3 points
