@@ -82,11 +82,11 @@ $(function() {
 $(function() {
   $('.content').hover(function() {
     $('.caption', this).animate({
-      top: "5%"
-    }, 300);
+      top: "15%"
+    }, 200);
   }, function() {
     $('.caption', this).animate({
-      top: "15%"
+      top: "0%"
     }, 300);
   });
 });
