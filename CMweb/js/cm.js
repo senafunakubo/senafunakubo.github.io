@@ -55,7 +55,7 @@ $(function() {
 
 // 3 points - make it disappear
   $('#your_solution').append(
-    '<style type="text/css">.fa-amazon,.fa-globe,.fa-thumbs-o-up {display:none;}'
+    '<style type="text/css">.fa-amazon,.fa-globe,.fa-cloud-upload {display:none;}'
   );
 
 // your solution - height of solution
@@ -72,7 +72,7 @@ $(function() {
   $(window).scroll(function() {
     var triggerNodePosition = $(triggerNode).offset().top - $(window).height();
     if ($(window).scrollTop() > triggerNodePosition) {
-      $('.fa-amazon, .fa-globe, .fa-thumbs-o-up').delay(500).fadeIn(1000);
+      $('.fa-amazon, .fa-globe, .fa-cloud-upload').delay(500).fadeIn(1000);
     }
   });
 

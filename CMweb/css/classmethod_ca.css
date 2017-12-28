@@ -171,7 +171,7 @@ img.mobile {
 * -------------------------------- */
 
 #whatwedo {
-  height: 700px;
+  height: 680px;
   text-align: center;
   background-color: #fff;
   padding: 30px 0;
@@ -228,7 +228,6 @@ p#caption_sora {
 .casestudy_wrapper {
   display: table;
   width: 95%;
-  /* height: 266.5px; */
   margin: 20px auto;
   table-layout: fixed;
 }
@@ -244,7 +243,6 @@ p#caption_sora {
   border: solid 1px #456990;
   font-size: 1.2rem;
   border-radius: 5px;
-  margin: 10px 0 30px 0;
 }
 
 .button_learn:hover {
@@ -303,6 +301,10 @@ p#caption_sora {
   text-align: center;
 }
 
+.whatwedo_button_margin{
+  margin: 25px 0;
+}
+
 /* --------------------------------
 * your_solution
 * -------------------------------- */
@@ -315,7 +317,7 @@ p#caption_sora {
 
 .solution_wrapper {
   margin: 0 auto;
-  width: 80%;
+  width: 75%;
   box-shadow: -9px 10px 39px -1px rgba(15, 9, 1, 0.66);
 }
 
@@ -346,7 +348,7 @@ p#caption_sora {
 }
 
 .your_solution_catch {
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-family: helvetica, sans-serif;
   font-weight: bold;
   padding: 0;
@@ -522,6 +524,16 @@ p#caption_sora {
  * -------------------------------- */
 
 @media (max-width: 767px) {
+
+  .main_phrase {
+    font-size: 2rem;
+  }
+
+  .sub_copy_cms {
+    font-size: 1.3rem;
+    margin: 0 10px 25px 10px;
+}
+
   /* --- header --- */
   #header {
     height: 60px;
