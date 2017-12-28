@@ -171,10 +171,10 @@ img.mobile {
 * -------------------------------- */
 
 #whatwedo {
-  height: 680px;
+  /*height: 640px;*/
   text-align: center;
   background-color: #fff;
-  padding: 30px 0;
+  padding: 50px 0;
 }
 
 .sub_copy_cms {
@@ -204,19 +204,19 @@ img.casestudy_img {
   margin: 0;
 }
 
-p#caption_sora_description {
+/*p#caption_sora_description {
   position: absolute;
   top: 3%;
   right: 5%;
   margin: 0;
   color: #00D0DB;
   opacity: 0.4;
-  font-size: 1.3rem;
-}
+  font-size: 1.1rem;
+}*/
 
 p#caption_sora {
   position: absolute;
-  top: 5%;
+  top: 0;
   right: 0;
   margin: 0;
 }
@@ -301,7 +301,7 @@ p#caption_sora {
   text-align: center;
 }
 
-.whatwedo_button_margin{
+.whatwedo_button_margin {
   margin: 25px 0;
 }
 
@@ -427,6 +427,16 @@ p#caption_sora {
   font-size: 1.2rem;
 }
 
+@media (max-width: 1350px) and (min-width: 1025px) {
+  /* --- solution --- */
+  .your_solution_catch {
+    font-size: 3rem;
+  }
+  .your_solution_description {
+    font-size: 0.4rem;
+  }
+}
+
 /* --------------------------------
  * tablet
  * -------------------------------- */
@@ -464,13 +474,13 @@ p#caption_sora {
     font-size: 1.2rem;
   }
   /* --- whatwedo --- */
-  #whatwedo {
-    height: 500px;
-  }
   .caption {
     font-size: 1rem;
     padding: 5px;
     top: 0;
+  }
+  #sora_pic {
+    width: 50%;
   }
   p#caption_sora_description {
     top: 4%;
@@ -524,16 +534,13 @@ p#caption_sora {
  * -------------------------------- */
 
 @media (max-width: 767px) {
-
   .main_phrase {
     font-size: 2rem;
   }
-
   .sub_copy_cms {
-    font-size: 1.3rem;
-    margin: 0 10px 25px 10px;
-}
-
+    font-size: 1.1rem;
+    margin: 0 10px 35px 10px;
+  }
   /* --- header --- */
   #header {
     height: 60px;
@@ -575,12 +582,41 @@ p#caption_sora {
     font-size: 1.1rem;
     line-height: 2.2rem;
     letter-spacing: 1px;
-}
+  }
+  /* --- whatwedo --- */
+  #whatwedo {
+    padding: 30px 0;
+  }
+  #sora_pic {
+    width: 50%;
+  }
+  p#caption_sora {
+    right: -30px;
+  }
+  .casestudy_wrapper, .casestudy_wrapper_box {
+    display: block;
+  }
+  .casestudy_wrapper {
+    width: 85%;
+  }
   /* --- solution --- */
   .your_solution_catch {
     font-size: 2.8rem;
   }
   .your_solution_description {
     font-size: 0.4rem;
+  }
+}
+
+@media (max-height: 567px) {
+  .catchphrase {
+    font-size: 3.4rem;
+  }
+  .sub-catchphrase {
+    font-size: 0.9rem;
+    line-height: 2rem;
+  }
+  .arrow {
+    display: none;
   }
 }
