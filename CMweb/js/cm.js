@@ -5,6 +5,7 @@ $(function() {
   // 64(px) = header's height
   box_height = h - 64;
 
+  //MAIN CATCH ANIMATION
   $(function() {
     var $allTopCatch = $('.top_catch');
     var $wordList = $('.top_catch').html().split("");
@@ -15,7 +16,12 @@ $(function() {
         catchShow.delay(idx * 30);
         catchShow.animate({ opacity: 1 }, 1000);
     });
-});
+  });
+
+  // your solution - height of solution
+    height = $(".pic_meeting").height();
+    height = height + 50;
+    $(".solution_box,.solution_wrapper").height(height);
 
   if (w>=1025){
     topImgWidth = w - 342;
@@ -27,6 +33,7 @@ $(function() {
     // arrow first place
     $(".arrow_place").
     css("top", box_height - 80 + "px");
+
   }
   else if (w<=1024 && w>=768){
     $(".catchphrase-box,.catchphrase-box-child,#top_section,#top_image").
@@ -37,6 +44,12 @@ $(function() {
     css("top", 550 + "px");
   }
   else if (w<768) {
+    height = $(".pic_meeting").height();
+    $(".solution_box").height(height);
+
+    allOfSolutionHeight = height * 2;
+    $("#your_solution").height(allOfSolutionHeight);
+
     box_height_mb = h - 60;
     if (h<=640) {
       $(".mobile,.catchphrase-box,.catchphrase-box-child,#top_section").
@@ -57,11 +70,6 @@ $(function() {
   $('#your_solution').append(
     '<style type="text/css">.fa-amazon,.fa-globe,.fa-cloud-upload {display:none;}'
   );
-
-// your solution - height of solution
-  height = $(".pic_meeting").height();
-  height = height + 50;
-  $(".solution_box,.solution_wrapper").height(height);
 
 });
 
