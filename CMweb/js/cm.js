@@ -69,7 +69,7 @@ $(function() {
 
 // 3 points - make it disappear
   $('#your_solution').append(
-    '<style type="text/css">.fa-amazon,.fa-globe,.fa-cloud-upload {display:none;}'
+    '<style type="text/css">.fa-amazon,.fa-globe,.fa-cogs {display:none;}'
   );
 
 });
@@ -81,7 +81,7 @@ $(function() {
   $(window).scroll(function() {
     var triggerNodePosition = $(triggerNode).offset().top - $(window).height();
     if ($(window).scrollTop() > triggerNodePosition) {
-      $('.fa-amazon, .fa-globe, .fa-cloud-upload').delay(500).fadeIn(1000);
+      $('.fa-amazon, .fa-globe, .fa-cogs').delay(500).fadeIn(1000);
     }
   });
 
