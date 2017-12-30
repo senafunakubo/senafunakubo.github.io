@@ -151,7 +151,7 @@ img.mobile {
   font-size: 1.3rem;
   line-height: 2.5rem;
   letter-spacing: 1.2px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .arrow_place {
@@ -574,7 +574,7 @@ p#caption_sora {
   }
   /* --- header --- */
   #header {
-    height: 60px;
+    /*height: 60px;*/
   }
   img.cm_logo {
     width: 70%;
