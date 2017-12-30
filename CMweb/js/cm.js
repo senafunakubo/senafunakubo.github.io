@@ -2,8 +2,9 @@ $(function() {
   h = $(window).innerHeight();
   w = $(window).innerWidth();
 
-  // 64(px) = header's height
-  box_height = h - 64;
+  headerHeight = $("#header").height();
+  headerHeight = headerHeight + 20; //padding
+  box_height = h - headerHeight;
 
   //MAIN CATCH ANIMATION
   $(function() {

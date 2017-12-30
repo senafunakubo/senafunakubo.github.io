@@ -46,6 +46,10 @@ body {
   background-color: #fff;
 }
 
+#nav-open {
+  display: none;
+}
+
 /* --------------------------------
  * header
  * -------------------------------- */
@@ -363,13 +367,13 @@ p#caption_sora {
 }
 
 .solution_button_deco {
-    color: #fff;
-    border: solid 1px #fff;
-    font-size: 1.2rem;
-    width: 25%;
-    text-align: center;
-    float: right;
-    padding: 6px;
+  color: #fff;
+  border: solid 1px #fff;
+  font-size: 1.2rem;
+  width: 25%;
+  text-align: center;
+  float: right;
+  padding: 6px;
 }
 
 /* --------------------------------
@@ -461,6 +465,9 @@ p#caption_sora {
     padding: 8px;
     font-size: 1rem;
   }
+  #nav-open {
+    display: none;
+  }
   /* --- header --- */
   .nav_margin {
     margin: 20px 30px 10px 0;
@@ -526,12 +533,13 @@ p#caption_sora {
     font-size: 3rem;
   }
   .your_solution_description {
-    font-size: 0.4rem;
+    font-size: 1rem;
+    line-height: 1.6;
   }
   .solution_button_deco {
     font-size: 0.8rem;
     width: 30%;
-}
+  }
   /* --- contact ---*/
   #contact {
     height: 230px;
@@ -562,8 +570,8 @@ p#caption_sora {
   #header {
     height: 60px;
   }
-  img#cm_logo {
-    width: 70%;
+  img.cm_logo {
+    width: 80%;
     margin: 6px 6px;
   }
   .navi_group {
