@@ -3,14 +3,14 @@
  * -------------------------------- */
 .colorfilter_wrapper {
   position: relative;
-  background-color: #333;
+  background-color: #2E294E;
 }
 
 img.colorfilter-image{
-  height: 400px;
+  height: 330px;
   width: 100%;
   display: block;
-	opacity: .4;
+	opacity: .3;
 }
 
 .top_main_catch{
@@ -35,3 +35,34 @@ img.colorfilter-image{
   font-size: 4.5rem;
   margin-bottom: 30px;
 }
+
+/* --------------------------------
+ * service_ex
+ * -------------------------------- */
+
+ #service_ex{
+   padding: 20px 0;
+ }
+ .solution_box{
+   float: left;
+   width: 356.25px;
+   height: 400px;
+ }
+ .yellow_box{
+   background-color: #FFF38B;
+ }
+ .green_box{
+   background-color: #00E1CB;
+ }
+ .solution_wrapper{
+   width: 100%;
+   height: 400px;
+   box-shadow: none;
+   margin-bottom: 20px;
+ }
+ .pic_meeting{
+   width: 25%;
+   height: 400px;
+   -webkit-filter:none;
+   filter: none;
+ }
