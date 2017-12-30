@@ -51,7 +51,7 @@ $(function() {
     allOfSolutionHeight = height * 2;
     $("#your_solution").height(allOfSolutionHeight);
 
-    box_height_mb = h - 60;
+    box_height_mb = h - (headerHeight + 22); //22 is nav
     if (h<=640) {
       $(".mobile,.catchphrase-box,.catchphrase-box-child,#top_section").
       css("height", box_height_mb + "px");
