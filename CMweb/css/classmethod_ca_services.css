@@ -36,6 +36,7 @@ img.colorfilter-image {
 }
 
 .top_main_deco {
+  width: 100%;
   font-weight: 600;
   font-size: 4.5rem;
   top: 45%;
@@ -47,7 +48,7 @@ img.colorfilter-image {
 .top_sub_catch {
   font-size: 1.6rem;
   line-height: 2.8rem;
-  top: 65%;
+  top: 66%;
 }
 
 /* --------------------------------
@@ -55,22 +56,25 @@ img.colorfilter-image {
   * -------------------------------- */
 
 #service_ex {
-  /*padding: 20px 0;*/
+  padding: 20px 0;
 }
 
 .solution_box {
   float: left;
   width: 25%;
   height: 100px;
-  background: #F7F6D8;
 }
 
-.yellow_box {
-  background-color: #F7F6D8;
+.solution_box:hover{
+  background-color: #E6EDFA;
 }
 
-.green_box {
-  background-color: #00E1CB;
+.odd_box {
+  background-color: #fff;
+}
+
+.even_box {
+  background-color: #fff;
 }
 
 .solution_wrapper {
@@ -78,7 +82,6 @@ img.colorfilter-image {
   width: 100%;
   height: 100px;
   box-shadow: none;
-  margin-bottom: 20px;
 }
 
 .solution_icon{
@@ -115,3 +118,69 @@ img.solution_aws{
   height: 55px;
   top: 25%;
 }
+
+/* --------------------------------
+  * Alexa
+  * -------------------------------- */
+
+  #alexa,#customer{
+    height: 600px;
+    position: relative;
+  }
+
+  #aws,#iot{
+    height: 600px;
+    background-color: #F7F6DF;
+    position: relative;
+  }
+
+  .colorfilter_wrapper_service_left,.colorfilter_wrapper_service_right{
+    height: 600px;
+    width: 470px;
+    background-color: #031D44;
+    position: absolute;
+    top: 0;
+  }
+
+  .colorfilter_wrapper_service_left {
+    left: 0;
+  }
+
+  .colorfilter_wrapper_service_right {
+    right: 0;
+  }
+
+  img.service_pic{
+    height: 600px;
+    width: 470px;
+    display: block;
+    opacity: .35;
+  }
+
+  /* --------------------------------
+  * AWS
+  * -------------------------------- */
+
+  #aws{
+
+  }
+
+  img.aws_pic{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  /* --------------------------------
+  * Customer
+  * -------------------------------- */
+
+  #customer{
+  }
+
+  /* --------------------------------
+  * IoT
+  * -------------------------------- */
+
+  #iot{
+  }
