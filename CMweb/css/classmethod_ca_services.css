@@ -39,7 +39,7 @@ img.colorfilter-image {
   width: 100%;
   font-weight: 600;
   font-size: 4.5rem;
-  top: 45%;
+  top: 40%;
   font-family: 'Open Sans', sans-serif;
   display: inline-block;
   letter-spacing: 1.5px;
@@ -48,7 +48,7 @@ img.colorfilter-image {
 .top_sub_catch {
   font-size: 1.6rem;
   line-height: 2.8rem;
-  top: 66%;
+  top: 63%;
 }
 
 /* --------------------------------
@@ -56,7 +56,7 @@ img.colorfilter-image {
   * -------------------------------- */
 
 #service_ex {
-  padding: 20px 0;
+  /*padding: 20px 0;*/
 }
 
 .solution_box {
@@ -115,7 +115,7 @@ img.solution_big_logo{
 }
 
 img.solution_aws{
-  height: 55px;
+  height: 50px;
   top: 25%;
 }
 
@@ -125,12 +125,13 @@ img.solution_aws{
 
   #alexa,#customer{
     height: 600px;
+    background-color: #F2F7FC;
     position: relative;
   }
 
   #aws,#iot{
     height: 600px;
-    background-color: #F7F6DF;
+    /*background-color: #F7F6DF;*/
     position: relative;
   }
 
@@ -154,7 +155,47 @@ img.solution_aws{
     height: 600px;
     width: 470px;
     display: block;
-    opacity: .35;
+    opacity: .55;
+  }
+
+  .service_description_left{
+    position: absolute;
+    top: 5%;
+    left: 110%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 4rem;
+    margin: 0;
+    width: 150%;
+    font-weight: lighter;
+  }
+
+  .service_description_sub_left{
+    position: absolute;
+    top: 17%;
+    left: 110%;
+    font-size: 1.8rem;
+    margin: 0;
+    width: 150%;
+    font-weight: lighter;
+  }
+
+  .service_description_right{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 4rem;
+    margin: 0;
+    font-weight: lighter;
+  }
+
+  .service_description_sub_right{
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: lighter;
+    width: 60%;
+  }
+
+  .jump_service{
+    text-decoration: none;
+    color: #333;
   }
 
   /* --------------------------------

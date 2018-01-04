@@ -21,9 +21,9 @@ $(function() {
   });
 
   // your solution - height of solution
-    height = $(".pic_meeting").height();
-    height = height + 50;
-    $(".solution_box,.solution_wrapper").height(height);
+    solution_height = $(".pic_meeting").height();
+    solution_height = solution_height + 50;
+    $(".solution_box,.solution_wrapper").height(solution_height);
 
   if (w>=1025){
     topImgWidth = w - 342;
