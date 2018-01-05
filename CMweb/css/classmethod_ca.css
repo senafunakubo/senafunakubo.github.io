@@ -92,7 +92,7 @@ p.head-navigation {
   padding: 10px 0;
 }
 
-.nav-wrap{
+.nav-wrap-mobile{
   display: none;
 }
 
@@ -584,7 +584,7 @@ p#caption_sora {
     display: none;
   }
 
-  .nav-wrap {
+  .nav-wrap-mobile {
     position: relative;
     display: inherit;
   }

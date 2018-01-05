@@ -3,7 +3,7 @@ $(function() {
   w = $(window).innerWidth();
 
   headerHeight = $("#header").height();
-  mobileNavHeight = $(".navi_group").height();
+  navWrapHeight = $(".nav-wrap-mobile").height();
   headerHeight = headerHeight + 20; //padding
   box_height = h - headerHeight;
 
