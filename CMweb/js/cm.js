@@ -2,9 +2,9 @@ $(function() {
   h = $(window).innerHeight();
   w = $(window).innerWidth();
 
-  headerHeight = $("#header").height();
+  headerHeight = $("#header").innerHeight();
   navWrapHeight = $(".nav-wrap-mobile").height();
-  headerHeight = headerHeight + 20; //padding
+  // headerHeight = headerHeight + 20; //padding
   box_height = h - headerHeight;
 
   //MAIN CATCH ANIMATION
