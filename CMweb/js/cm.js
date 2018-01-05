@@ -4,7 +4,6 @@ $(function() {
 
   headerHeight = $("#header").innerHeight();
   navWrapHeight = $(".nav-wrap-mobile").height();
-  // headerHeight = headerHeight + 20; //padding
   box_height = h - headerHeight;
 
   //MAIN CATCH ANIMATION
@@ -26,11 +25,11 @@ $(function() {
     $(".solution_box,.solution_wrapper").height(solution_height);
 
   if (w>=1025){
-    topImgWidth = w - 342;
-    $("#top_image").css("width", topImgWidth + "px");
-
     $(".catchphrase-box,.catchphrase-box-child,#top_section,#top_image").
     css("height", box_height + "px");
+
+    topImgWidth = w - 342;
+    $("#top_image").css("width", topImgWidth + "px");
 
     // arrow first place
     $(".arrow_place").
