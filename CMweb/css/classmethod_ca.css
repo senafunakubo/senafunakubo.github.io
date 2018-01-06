@@ -382,6 +382,11 @@ p#caption_sora {
   padding: 6px;
 }
 
+.solution_button_deco:hover{
+  background-color: #fff;
+  color: #1A9A9A;
+}
+
 /* --------------------------------
 * contact
 * -------------------------------- */

@@ -1,4 +1,5 @@
 $(function() {
+
   h = $(window).innerHeight();
   w = $(window).innerWidth();
 
@@ -6,6 +7,7 @@ $(function() {
   navWrapHeight = $(".nav-wrap-mobile").height();
   box_height = h - headerHeight;
 
+  
   //MAIN CATCH ANIMATION
   $(function() {
     var $allTopCatch = $('.top_catch');
@@ -73,6 +75,7 @@ $(function() {
   );
 
 });
+
 
 // 3 points - fadein
 $(function() {

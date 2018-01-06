@@ -10,6 +10,9 @@
 /* --------------------------------
  * top
  * -------------------------------- */
+#top{
+  margin-bottom: 20px;
+}
 
 .colorfilter_wrapper {
   position: relative;
@@ -124,73 +127,71 @@ img.solution_aws{
   * -------------------------------- */
 
   #alexa,#customer{
-    height: 600px;
-    background-color: #F2F7FC;
+    height: 315px;
     position: relative;
   }
 
   #aws,#iot{
-    height: 600px;
-    /*background-color: #F7F6DF;*/
+    height: 315px;
     position: relative;
   }
 
-  .colorfilter_wrapper_service_left,.colorfilter_wrapper_service_right{
-    height: 600px;
-    width: 470px;
-    background-color: #031D44;
-    position: absolute;
-    top: 0;
+  .service_description_box_left{
+    position: relative;
+    background-color: #D0F1ED;
+    float: right;
+    height: 315px;
+    width: 1045px;
+    /*レスポンシブ*/
   }
 
-  .colorfilter_wrapper_service_left {
-    left: 0;
-  }
-
-  .colorfilter_wrapper_service_right {
-    right: 0;
+  .service_description_box_right{
+    position: relative;
+    background-color: #F0F7F4;
+    float: left;
+    height: 315px;
+    width: 1045px;
+    /*レスポンシブ*/
   }
 
   img.service_pic{
-    height: 600px;
-    width: 470px;
+    height: 315px;
+    width: 380px;
     display: block;
-    opacity: .55;
+    margin: 0;
   }
 
-  .service_description_left{
+  img.left_pic{
+    float: left;
+  }
+
+  img.right_pic{
+    float: right;
+  }
+
+  .service_description_box_wrapper{
     position: absolute;
-    top: 5%;
-    left: 110%;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .service_description_left,.service_description_right{
     font-family: 'Quicksand', sans-serif;
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin: 0;
-    width: 150%;
-    font-weight: lighter;
   }
 
-  .service_description_sub_left{
-    position: absolute;
-    top: 17%;
-    left: 110%;
+  .service_description_sub_left,.service_description_sub_right{
     font-size: 1.8rem;
-    margin: 0;
-    width: 150%;
-    font-weight: lighter;
+    margin: 20px 0;
   }
 
   .service_description_right{
-    font-family: 'Quicksand', sans-serif;
-    font-size: 4rem;
-    margin: 0;
-    font-weight: lighter;
-  }
-
-  .service_description_sub_right{
-    font-size: 1.8rem;
-    margin: 0;
-    font-weight: lighter;
-    width: 60%;
+    display: inline-block;
   }
 
   .jump_service{
@@ -199,29 +200,16 @@ img.solution_aws{
   }
 
   /* --------------------------------
-  * AWS
+  * worldwide-support
   * -------------------------------- */
 
-  #aws{
+  #worldwide-support{
+    text-align: center;
+    margin: 20px 0;
+    padding: 30px 0;
 
   }
 
-  img.aws_pic{
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-
-  /* --------------------------------
-  * Customer
-  * -------------------------------- */
-
-  #customer{
-  }
-
-  /* --------------------------------
-  * IoT
-  * -------------------------------- */
-
-  #iot{
+  .worldwide{
+    color: #333;
   }
