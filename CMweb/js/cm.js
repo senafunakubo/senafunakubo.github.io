@@ -166,7 +166,7 @@ $(window).resize(function() {
     timer = setTimeout(function() {
       windowWidth = $(window).innerWidth();
       if (windowWidth<768) {
-        $("#contact").css("margin-top", 350 + "px");
+        $("#contact").css("margin-top", 380 + "px");
       }
    }, 200);
 });
