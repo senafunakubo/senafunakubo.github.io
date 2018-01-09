@@ -1,4 +1,4 @@
-$(function() {
+$(document).ready(function() {
 
   h = $(window).innerHeight();
   w = $(window).innerWidth();

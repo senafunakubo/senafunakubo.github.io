@@ -77,13 +77,13 @@ p.head-navigation {
 }
 
 .nav_deco {
-  font-family: 'Libre Baskerville', serif;
+  font-family: 'Quicksand', sans-serif;
   color: white;
   text-decoration: none;
 }
 
 .nav_deco:hover {
-  color: #F45B69;
+  color: #456990;
   opacity: 0.95;
 }
 
