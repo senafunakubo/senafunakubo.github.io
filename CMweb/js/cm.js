@@ -7,7 +7,7 @@ $(function() {
   navWrapHeight = $(".nav-wrap-mobile").height();
   box_height = h - headerHeight;
 
-  
+
   //MAIN CATCH ANIMATION
   $(function() {
     var $allTopCatch = $('.top_catch');
@@ -37,6 +37,10 @@ $(function() {
     $(".arrow_place").
     css("top", box_height - 80 + "px");
 
+    service_img_box_width = w - 380;
+    $(".service_description_box_left,.service_description_box_right").
+    css("width", service_img_box_width + "px");
+
   }
   else if (w<=1024 && w>=768){
     $(".catchphrase-box,.catchphrase-box-child,#top_section,#top_image").
@@ -45,6 +49,7 @@ $(function() {
     // arrow first place
     $(".arrow_place").
     css("top", 550 + "px");
+
   }
   else if (w<768) {
     height = $(".pic_meeting").height();

@@ -11,7 +11,7 @@
  * top
  * -------------------------------- */
 #top{
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
 }
 
 .colorfilter_wrapper {
@@ -141,7 +141,7 @@ img.solution_aws{
     background-color: #D0F1ED;
     float: right;
     height: 315px;
-    width: 1045px;
+    /*width: 1045px;*/
     /*レスポンシブ*/
   }
 
@@ -150,7 +150,7 @@ img.solution_aws{
     background-color: #F0F7F4;
     float: left;
     height: 315px;
-    width: 1045px;
+    /*width: 1045px;*/
     /*レスポンシブ*/
   }
 
@@ -211,5 +211,10 @@ img.solution_aws{
   }
 
   .worldwide{
+    color: #333;
+  }
+
+  .other-location{
+    /*text-decoration: none;*/
     color: #333;
   }
