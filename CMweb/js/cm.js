@@ -157,3 +157,16 @@ function chatSubMove() {
     $this.children("span:last").fadeOut(1000);
   });
 }
+
+var timer = false;
+$(window).resize(function() {
+    if(timer !== false){
+        clearTimeout(timer);
+    }
+    timer = setTimeout(function() {
+      windowWidth = $(window).innerWidth();
+      if (windowWidth<768) {
+        $("#contact").css("margin-top", 350 + "px");
+      }
+   }, 200);
+});
