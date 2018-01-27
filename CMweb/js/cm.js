@@ -168,5 +168,8 @@ $(window).resize(function() {
       if (windowWidth<768) {
         $("#contact").css("margin-top", 400 + "px");
       }
+      else if (windowWidth >=768) {
+        $("#contact").css("margin-top", 40 + "px");
+      }
    }, 200);
 });
