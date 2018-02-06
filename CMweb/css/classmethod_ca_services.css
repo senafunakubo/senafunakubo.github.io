@@ -9,9 +9,6 @@
 /* --------------------------------
  * top
  * -------------------------------- */
-#top{
-  /*margin-bottom: 20px;*/
-}
 
 .colorfilter_wrapper {
   position: relative;
@@ -42,7 +39,7 @@ img.colorfilter-image {
   font-weight: 600;
   font-size: 4.5rem;
   top: 40%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: helvetica, sans-serif;
   display: inline-block;
   letter-spacing: 1.5px;
 }
@@ -57,10 +54,6 @@ img.colorfilter-image {
 /* --------------------------------
   * service_ex
   * -------------------------------- */
-
-#service_ex {
-  /*padding: 20px 0;*/
-}
 
 .solution_box {
   float: left;
@@ -241,7 +234,7 @@ img.solution_aws{
       font-size: 3.5rem;
       top: 30%;
       width: 90%;
-      letter-spacing: 1.5px;
+      letter-spacing: 1.8px;
     }
 
     .top_sub_catch {
