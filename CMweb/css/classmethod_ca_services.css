@@ -128,12 +128,10 @@ img.solution_aws{
 
   #alexa,#customer{
     height: 315px;
-    /*position: relative;*/
   }
 
   #aws,#iot{
     height: 315px;
-    /*position: relative;*/
   }
 
   .service_description_box_left{
@@ -141,8 +139,6 @@ img.solution_aws{
     background-color: #D0F1ED;
     float: right;
     height: 315px;
-    /*width: 1045px;*/
-    /*レスポンシブ*/
   }
 
   .service_description_box_right{
@@ -150,8 +146,6 @@ img.solution_aws{
     background-color: #F0F7F4;
     float: left;
     height: 315px;
-    /*width: 1045px;*/
-    /*レスポンシブ*/
   }
 
   img.service_pic{
@@ -214,6 +208,11 @@ img.solution_aws{
 
   .worldwide{
     color: #333;
+    font-size: 2.5rem;
+  }
+
+  .offices{
+    margin: 20px 10px;
   }
 
   .other-location{
@@ -229,4 +228,35 @@ img.solution_aws{
   .worldicons{
     width: 70px;
     height: 50px;
+  }
+
+  /* --------------------------------
+   * smart phone
+   * -------------------------------- */
+
+  @media (max-width: 767px) {
+
+    /*top*/
+    .top_main_deco {
+      font-size: 3.5rem;
+      top: 30%;
+      width: 90%;
+      letter-spacing: 1.5px;
+    }
+
+    .top_sub_catch {
+      font-size: 1.3rem;
+      line-height: 2.8rem;
+      top: 70%;
+      width: 90%;
+    }
+
+    /*services*/
+    .service_description_left,.service_description_right{
+      font-size: 3rem;
+    }
+
+    .service_description_sub_left,.service_description_sub_right{
+      font-size: 1.3rem;
+    }
   }

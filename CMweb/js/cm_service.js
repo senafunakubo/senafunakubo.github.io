@@ -16,14 +16,16 @@ $(document).ready(function() {
   }
   else if (w<768) {
 
-    if (h<=640) {
+    $(".service_pic,.service_description_box_left,.service_description_box_right").
+    css("width", w + "px");
 
-    }
-    else if(h>=780){
-
-    }
-    else {
-
-    }
+    // if (h<=640) {
+    // }
+    // else if(h>=780){
+    //
+    // }
+    // else {
+    //
+    // }
   }
 });
