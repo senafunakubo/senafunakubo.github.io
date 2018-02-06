@@ -128,12 +128,12 @@ img.solution_aws{
 
   #alexa,#customer{
     height: 315px;
-    position: relative;
+    /*position: relative;*/
   }
 
   #aws,#iot{
     height: 315px;
-    position: relative;
+    /*position: relative;*/
   }
 
   .service_description_box_left{
