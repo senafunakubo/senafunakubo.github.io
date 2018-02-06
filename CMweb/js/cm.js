@@ -158,6 +158,7 @@ function chatSubMove() {
   });
 }
 
+//contact margin
 var timer = false;
 $(window).resize(function() {
     if(timer !== false){
@@ -166,7 +167,7 @@ $(window).resize(function() {
     timer = setTimeout(function() {
       windowWidth = $(window).innerWidth();
       if (windowWidth<768) {
-        $("#contact").css("margin-top", 400 + "px");
+        $("#contact").css("margin-top", 40 + "px");
       }
       else if (windowWidth >=768) {
         $("#contact").css("margin-top", 40 + "px");
