@@ -22,6 +22,7 @@ body {
   color: #456990;
   font-size: 3rem;
   font-weight: 100;
+  margin: 0 10px;
   display: inline-block;
   font-family: 'Open Sans', sans-serif;
 }
@@ -184,12 +185,12 @@ img.mobile {
   /*height: 640px;*/
   text-align: center;
   background-color: #fff;
-  padding: 50px 0;
+  padding: 70px 0;
 }
 
 .sub_copy_cms {
   font-size: 1.6rem;
-  margin: 0 0 60px 0;
+  margin: 30px 0 60px 0;
 }
 
 img.casestudy_img {
@@ -238,7 +239,7 @@ p#caption_sora {
 .casestudy_wrapper {
   display: table;
   width: 95%;
-  margin: 20px auto;
+  margin: 50px auto;
   table-layout: fixed;
 }
 
@@ -269,7 +270,7 @@ p#caption_sora {
   /*height: 540px;*/
   text-align: center;
   background-color: #F3F7FB;
-  padding: 30px 0;
+  padding: 70px 0;
 }
 
 .advantage {
@@ -392,8 +393,7 @@ p#caption_sora {
 * -------------------------------- */
 
 #contact {
-  /*height: 300px;*/
-  padding-bottom: 30px;
+  padding: 50px 0;
   background-color: #F3F7FB;
 }
 
@@ -420,8 +420,13 @@ p#caption_sora {
   letter-spacing: 2.5px;
 }
 
+.chat_sub{
+  margin: 0 0 40px 0;
+}
+
 .contact_catchphrase {
   /*font-size: 4rem;*/
+  margin: 0 0 30px 0;
   font-weight: bold;
 }
 
@@ -534,7 +539,7 @@ p#caption_sora {
   }
   .sub_copy_cms {
     font-size: 1.3rem;
-    margin: 0 0 45px 0;
+    margin: 30px 0;
   }
   /* --- solution --- */
   .solution_wrapper {
@@ -553,10 +558,10 @@ p#caption_sora {
   }
   /* --- contact ---*/
   #contact {
-    height: 230px;
+    padding: 40px 0;
   }
   .contact_catchphrase {
-    margin: 30px 0 15px 0px;
+    margin: 30px 0 0 0;
   }
   /* --- footer ---*/
   .cm_logo_footer {
@@ -572,10 +577,11 @@ p#caption_sora {
 @media (max-width: 767px) {
   .main_phrase {
     font-size: 2rem;
+    margin: 0 20px;
   }
   .sub_copy_cms {
     font-size: 1.2rem;
-    margin: 0 10px 30px 10px;
+    margin: 20px 10px 30px 10px;
   }
   /* --- header --- */
   #header {
@@ -685,6 +691,9 @@ p#caption_sora {
     width: 90%;
   }
   /* --- 3 points --- */
+  #three-points{
+    padding: 40px 0;
+  }
   .points-wrapper, .points-box {
     display: block;
   }

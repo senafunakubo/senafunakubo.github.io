@@ -234,6 +234,24 @@ img.solution_aws{
   }
 
   /* --------------------------------
+   * contact
+   * -------------------------------- */
+
+  #contact{
+    padding: 50px 0;
+  }
+
+  .contact_catchphrase{
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .chat_sub{
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  /* --------------------------------
    * smart phone
    * -------------------------------- */
 
@@ -251,7 +269,7 @@ img.solution_aws{
     .top_sub_catch {
       font-size: 1.3rem;
       line-height: 2.8rem;
-      top: 70%;
+      top: 65%;
       width: 90%;
     }
 
@@ -280,4 +298,14 @@ img.solution_aws{
       margin: 30px 0;
     }
 
+    /*chat*/
+    .chat_sub{
+      font-size: 1.3rem;
+      margin: 0 0 10px 0;
+    }
+
+    .contact_catchphrase{
+      margin: 0;
+      margin-bottom: 0;
+    }
   }

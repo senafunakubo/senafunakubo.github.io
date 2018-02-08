@@ -60,16 +60,19 @@ $(function() {
 
     box_height_mb = h - (headerHeight + 22); //22 is nav
     if (h<=640) {
-      $(".mobile,.catchphrase-box,.catchphrase-box-child,#top_section").
+      // $(".mobile,.catchphrase-box,.catchphrase-box-child,#top_section").
+      $(".mobile,.catchphrase-box,.catchphrase-box-child").
       css("height", box_height_mb + "px");
     }
     else if(h>=780){
-      $(".mobile,.catchphrase-box,.catchphrase-box-child,#top_section").
+      $(".mobile,.catchphrase-box,.catchphrase-box-child").
+      // $(".mobile,.catchphrase-box,.catchphrase-box-child,#top_section").
       css("height", 650 + "px");
     }
     else {
-      $(".mobile,.catchphrase-box,.catchphrase-box-child,#top_section").
-      css("height", 70 + "%");
+      $(".mobile,.catchphrase-box,.catchphrase-box-child").
+      // $(".mobile,.catchphrase-box,.catchphrase-box-child,#top_section").
+      css("height", 600 + "px");
     }
   }
 
