@@ -1,0 +1,52 @@
+/* --------------------------------
+  * service_ex
+  * -------------------------------- */
+#service_ex{
+  margin: 25px 0;
+}
+
+.solution_box {
+  text-align: center;
+  float: left;
+  width: 33.33%;
+  height: 150px;
+  background-color: #fff;
+}
+
+.solution_box:hover{
+  background-color: silver;
+}
+
+.solution_wrapper {
+  position: relative;
+  height: 150px;
+  /*box-shadow: none;*/
+}
+
+/*.solution_icon{
+  position: absolute;
+  width: 30%;
+  height: 50%;
+  top: 10px;
+  left: 0;
+  margin: 0;
+}*/
+
+.solution_name{
+  width: 90%;
+  position: absolute;
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: 'Quicksand', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  left: 50%;
+  top: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+.solution_center{
+  background-color: #E6EDFA;
+}

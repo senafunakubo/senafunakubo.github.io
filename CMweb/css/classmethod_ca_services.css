@@ -52,70 +52,6 @@ img.colorfilter-image {
 }
 
 /* --------------------------------
-  * service_ex
-  * -------------------------------- */
-
-.solution_box {
-  float: left;
-  width: 25%;
-  height: 100px;
-}
-
-.solution_box:hover{
-  background-color: #E6EDFA;
-}
-
-.odd_box {
-  background-color: #fff;
-}
-
-.even_box {
-  background-color: #fff;
-}
-
-.solution_wrapper {
-  position: relative;
-  width: 100%;
-  height: 100px;
-  box-shadow: none;
-}
-
-.solution_icon{
-  position: absolute;
-  width: 30%;
-  height: 100px;
-  top: 0;
-  left: 0;
-  margin: 0;
-}
-
-.solution_name{
-  width: 55%;
-  position: absolute;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.8rem;
-  font-weight: bold;
-  left: 65%;
-  top: 50%;
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  margin: 0;
-}
-
-img.solution_big_logo{
-  width: 20%;
-  height: 60px;
-  top: 20%;
-  left: 7%;
-}
-
-img.solution_aws{
-  height: 50px;
-  top: 25%;
-}
-
-/* --------------------------------
   * Services
   * -------------------------------- */
 
@@ -194,7 +130,7 @@ img.solution_aws{
 
   #worldwide-support{
     text-align: center;
-    margin: 20px 0;
+    /*margin: 20px 0;*/
     padding: 30px 0;
 
   }
