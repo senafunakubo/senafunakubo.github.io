@@ -1,0 +1,15 @@
+/* --------------------------------
+ * top
+ * -------------------------------- */
+
+.colorfilter_wrapper {
+  position: relative;
+  background-color: #031D44;
+}
+
+img.colorfilter-image {
+  height: 450px;
+  width: 100%;
+  display: block;
+  opacity: .20;
+}
