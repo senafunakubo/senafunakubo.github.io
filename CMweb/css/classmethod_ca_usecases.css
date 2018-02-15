@@ -5,6 +5,12 @@
   margin: 40px 0;
 }
 
+.solution_wrapper {
+  position: relative;
+  height: 280px;
+  /*box-shadow: none;*/
+}
+
 .solution_box {
   text-align: center;
   float: left;
@@ -17,24 +23,17 @@
   background-color: #A3B7C4;
 }
 
-.solution_wrapper {
-  position: relative;
-  height: 280px;
-  /*box-shadow: none;*/
-}
-
 .solution_icon{
   position: absolute;
   top: 15%;
-  left: 41.5%;
   margin: 0;
 }
 
-.solution_icon_bigdata{
-  left: 43.6%;
+.solution_icon_migration{
+  left: 43%;
 }
 
-.solution_icon_iot{
+.solution_icon_bigdata,.solution_icon_iot{
   left: 44%;
 }
 
@@ -45,7 +44,7 @@
   font-size: 2.5rem;
   font-weight: bold;
   left: 50%;
-  top: 42%;
+  top: 43%;
   -ms-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -55,9 +54,9 @@
 .solution_jump_description{
   width: 90%;
   position: absolute;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   left: 5%;
-  top: 55%;
+  top: 56%;
   margin: 0;
   letter-spacing: 0.8px;
   line-height: 2.5rem;
@@ -81,12 +80,12 @@
 }
 
 #iot{
-  height: 900px;
+  height: 850px;
 }
 
 img.img_ex_size{
-  width: 45%;
-  height: 45%;
+  width: 40%;
+  height: 40%;
   object-fit: contain;
 }
 
@@ -110,4 +109,93 @@ img.img_ex_size{
   width: 80%;
   letter-spacing: 0.8px;
   line-height: 3rem;
+}
+
+/* --------------------------------
+  * tablet
+  * -------------------------------- */
+
+@media (max-width: 1024px) and (min-width: 768px) {
+
+/*  solution_jump  */
+
+  .solution_name{
+    width: 100%;
+    font-size: 2rem;
+    left: 50%;
+    top: 39%;
+  }
+
+  .solution_jump_description{
+    width: 100%;
+    font-size: 1.2rem;
+    left: 5%;
+    top: 50%;
+    letter-spacing: 0.8px;
+    line-height: 2.5rem;
+  }
+}
+
+/* --------------------------------
+ * smart phone
+ * -------------------------------- */
+
+@media (max-width: 767px) {
+
+  #service_ex{
+    height: 750px;
+    margin: 0;
+  }
+
+  .solution_wrapper {
+    margin: 0 auto;
+    width: 90%;
+    box-shadow: none;
+    height: 750px;
+  }
+
+  .solution_box {
+    text-align: center;
+    float: none;
+    width: 100%;
+    height: 250px;
+  }
+
+  .solution_icon{
+    top: 15%;
+    left: 44.5%;
+  }
+
+  .solution_name{
+    width: 100%;
+    font-size: 2rem;
+    left: 50%;
+    top: 48%;
+  }
+
+  .solution_jump_description{
+    width: 100%;
+    font-size: 1.2rem;
+    left: 0;
+    top: 58%;
+    letter-spacing: 0.8px;
+    line-height: 2.5rem;
+  }
+
+  .bigdata_jump{
+    font-size: 1.1rem;
+  }
+
+  .solution_icon_migration{
+    left: 42.8%;
+  }
+
+  .solution_icon_bigdata{
+    left: 44.8%;
+  }
+
+  .solution_icon_iot{
+    left: 44%;
+  }
+
 }
