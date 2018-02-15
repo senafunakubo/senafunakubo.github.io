@@ -142,6 +142,13 @@ img.img_ex_size{
 
 @media (max-width: 767px) {
 
+/*  navi  */
+  .scroll-nav ul li a {
+    font-size: 1.4rem;
+  }
+
+
+/*  services  */
   #service_ex{
     height: 750px;
     margin: 0;

@@ -193,6 +193,12 @@ img.colorfilter-image {
 
   @media (max-width: 767px) {
 
+    /*  navi  */
+    .scroll-nav ul li a {
+      font-size: 1.4rem;
+    }
+
+
     /*top*/
     .top_main_deco {
       font-family: helvetica, sans-serif;
