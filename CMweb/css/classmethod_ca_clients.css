@@ -13,3 +13,82 @@ img.colorfilter-image {
   display: block;
   opacity: .20;
 }
+
+/* --------------------------------
+ * customer_logo
+ * -------------------------------- */
+ #customer_logo{
+   padding: 40px 0;
+ }
+
+ .logo_line{
+   width: 100%;
+   text-align: center;
+   margin: 20px auto;
+ }
+
+ #muji_wrapper{
+   position: relative;
+   width: 200px;
+   height: 200px;
+   margin: 0 10px;
+   border: 1px solid #222;
+   display: inline-block;
+ }
+
+ .logo_size{
+   width: 200px;
+   height: 200px;
+   border: 1px solid #222;
+   margin: 0 10px;
+ }
+
+ .muji_size{
+   position: absolute;
+   top: 50%;
+   height: 40%;
+   width: 80%;
+   -ms-transform: translate(-50%, -50%);
+   -webkit-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+ }
+
+ .customer_so_on{
+   color: #70A288;
+   text-align: center;
+   margin: 0;
+   padding: 30px 0;
+ }
+
+ /* --------------------------------
+   * tablet
+   * -------------------------------- */
+
+ @media (max-width: 1024px) and (min-width: 768px) {
+ }
+
+ /* --------------------------------
+  * smart phone
+  * -------------------------------- */
+
+ @media (max-width: 767px) {
+   .logo_size{
+     width: 150px;
+     height: 150px;
+   }
+
+   #muji_wrapper{
+     width: 150px;
+     height: 150px;
+   }
+ }
+
+ @media (max-width: 360px) {
+   .logo_size{
+     margin: 0;
+   }
+
+   #muji_wrapper{
+     margin: 0;
+   }
+ }
