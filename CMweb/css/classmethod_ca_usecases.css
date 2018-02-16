@@ -24,9 +24,10 @@
 }
 
 .solution_icon{
-  position: absolute;
-  top: 15%;
-  margin: 0;
+  /*position: absolute;
+  top: 15%;*/
+  margin: 0 auto;
+  margin-top: 35px;
 }
 
 .solution_icon_migration{
@@ -70,17 +71,13 @@
 * ex
 * -------------------------------- */
 
-#migration,#bigdata,#iot{
+#use-migration,#use-bigdata,#use-iot{
   padding: 40px 0;
   background-color: #C9F3EE;
 }
 
-#bigdata{
+#use-bigdata{
   background-color: #EFF8F4;
-}
-
-#iot{
-  height: 850px;
 }
 
 img.img_ex_size{
@@ -127,12 +124,18 @@ img.img_ex_size{
   }
 
   .solution_jump_description{
-    width: 100%;
+    width: 90%;
     font-size: 1.2rem;
     left: 5%;
     top: 50%;
     letter-spacing: 0.8px;
     line-height: 2.5rem;
+  }
+
+  /*  service  */
+
+  img.img_ex_size{
+    width: 90%;
   }
 }
 
@@ -149,11 +152,6 @@ img.img_ex_size{
 
 
 /*  services  */
-  #service_ex{
-    height: 750px;
-    margin: 0;
-  }
-
   .solution_wrapper {
     margin: 0 auto;
     width: 90%;
@@ -170,7 +168,7 @@ img.img_ex_size{
 
   .solution_icon{
     top: 15%;
-    left: 44.5%;
+    /*left: 44.5%;*/
   }
 
   .solution_name{
@@ -193,16 +191,19 @@ img.img_ex_size{
     font-size: 1.1rem;
   }
 
-  .solution_icon_migration{
-    left: 42.8%;
+  img.img_ex_size{
+    width: 100%;
   }
 
-  .solution_icon_bigdata{
-    left: 44.8%;
+  .ex_title{
+    font-size: 2.9rem;
+    letter-spacing: 1.5px;
   }
 
-  .solution_icon_iot{
-    left: 44%;
+  .ex_description{
+    font-size: 1.7rem;
+    letter-spacing: 0.8px;
+    line-height: 3rem;
   }
 
 }
