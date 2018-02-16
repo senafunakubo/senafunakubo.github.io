@@ -112,6 +112,7 @@ img.colorfilter-image {
   .service_description_sub_left,.service_description_sub_right{
     font-size: 1.8rem;
     margin: 20px 0;
+    line-height: 3rem;
     text-align: center;
   }
 
@@ -161,8 +162,8 @@ img.colorfilter-image {
   }
 
   .sub_copy_cms{
-    line-height: 2.5rem;
-    margin: 0;
+    line-height: 3rem;
+    margin: 0 30px;
   }
 
   .second_line{
@@ -193,11 +194,10 @@ img.colorfilter-image {
 
   @media (max-width: 767px) {
 
-    /*  navi  */
+    /*navi*/
     .scroll-nav ul li a {
-      font-size: 1.4rem;
+    font-size: 1.6rem;
     }
-
 
     /*top*/
     .top_main_deco {

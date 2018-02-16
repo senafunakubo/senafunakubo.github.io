@@ -601,6 +601,7 @@ p#caption_sora {
   }
 
   .scroll-nav {
+    height: 22px;
     width: 100%;
     padding-left: 5px;
     background: #1A9A9A;
@@ -617,16 +618,17 @@ p#caption_sora {
   }
 
   .scroll-nav ul li {
+    height: 22px;
     float: left;
     width: 110px;
     text-align: center;
     display: flex;
-	  align-items: center;
+	  /*align-items: center;*/
   }
 
   .scroll-nav ul li a {
     font-family: 'Libre Baskerville', serif;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     width: 100px;
     display: inline-block;
     color: #fff;

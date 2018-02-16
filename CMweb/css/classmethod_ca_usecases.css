@@ -144,12 +144,10 @@ img.img_ex_size{
  * -------------------------------- */
 
 @media (max-width: 767px) {
-
-/*  navi  */
+  /*navi*/
   .scroll-nav ul li a {
-    font-size: 1.4rem;
+  font-size: 1.6rem;
   }
-
 
 /*  services  */
   .solution_wrapper {
