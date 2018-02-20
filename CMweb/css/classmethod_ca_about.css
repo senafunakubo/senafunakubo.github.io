@@ -1,0 +1,111 @@
+/* --------------------------------
+* classmethod
+* -------------------------------- */
+ #classmethodca{
+  background-color: #F0F7F4;
+  /*min-height: 400px;*/
+  padding: 40px 0;
+ }
+
+ .classmethod_wrapper{
+   text-align: center;
+   margin: 20px 0;
+ }
+
+ .classmethod_wrapper a{
+   font-size: 2.2rem;
+   color: #1A4B71;
+   text-decoration: none;
+ }
+
+ img.classmethod_ca_pic{
+   text-align: center;
+   width: 300px;
+   height: 150px;
+ }
+
+ /*.whoweare{
+   padding: 0 20px;
+   font-family: 'Quicksand', sans-serif;
+   font-size: 2.8rem;
+ }*/
+
+ .classmethod_ca_des{
+   font-family: 'Quicksand', sans-serif;
+   font-size: 2rem;
+   margin: 30px 0;
+ }
+
+ /* --------------------------------
+ * classmethod_address
+ * -------------------------------- */
+
+ #classmethod_address{
+   padding: 40px 0;
+ }
+
+ .company_name{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2.8rem;
+  margin: 30px 0 0 0;
+ }
+
+ .company_address{
+   color: #1A4B71;
+   margin: 10px 0;
+ }
+
+ .maps{
+   width: 500px;
+   height: 350px;
+   frameborder: 0;
+ }
+
+ /* --------------------------------
+   * tablet
+   * -------------------------------- */
+
+ @media (max-width: 1024px) and (min-width: 768px) {
+   .classmethod_ca_des{
+     font-size: 1.8rem;
+     margin: 30px 10px;
+   }
+ }
+
+ /* --------------------------------
+  * smart phone
+  * -------------------------------- */
+
+ @media (max-width: 767px) {
+
+   /* classmethod_ca */
+   img.classmethod_ca_pic{
+     width: 240px;
+     height: 120px;
+   }
+
+   .classmethod_ca_des{
+     font-size: 1.8rem;
+     margin: 30px 20px;
+   }
+
+   /* address */
+   .company_name{
+    font-size: 2.6rem;
+    margin: 30px 10px;
+   }
+
+   .company_address{
+     margin: 10px 0;
+     margin: 30px 20px;
+   }
+
+   .maps{
+     width: 100%;
+     height: 350px;
+   }
+ }
+
+ @media (max-width: 360px) {
+
+ }
